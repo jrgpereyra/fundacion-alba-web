@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Fundación Alba</title>
+
+  <!-- Tipografías de la identidad -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Spectral:wght@600&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Material Symbols -->
+
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+  >
+
+  <!-- Tailwind -->
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'alba-blue': '#082E53',
+            'alba-yellow': '#FFB700',
+            'alba-gray': '#5A5A5A',
+            'alba-warm': '#FFFDF5'
+          },
+          fontFamily: {
+            'spectral': ['Spectral', 'serif'],
+            'open': ['Open Sans', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: #FFFDF5;
+      color: #082E53;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .font-spectral {
+      font-family: 'Spectral', serif;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+    }
+
+    /* El header debe tener siempre prioridad visual sobre el contenido */
+    section {
+      scroll-margin-top: 76px;
+    }
+
+    /* Animación sutil para elementos interactivos */
+    a {
+      transition:
+        color 180ms ease,
+        background-color 180ms ease,
+        border-color 180ms ease,
+        opacity 180ms ease;
+    }
+
+    .approach-photo {
+      background-image:
+        linear-gradient(
+          90deg,
+          rgba(255, 253, 245, 0.94) 0%,
+          rgba(255, 253, 245, 0.72) 30%,
+          rgba(255, 253, 245, 0.18) 58%,
+          rgba(255, 253, 245, 0) 82%
+        ),
+        url('assets/Adults_collaborating_around_table_2K_202609081242.jpeg');
+
+      background-size: cover;
+      background-position: center;
+    }
+
+    @media (max-width: 767px) {
+    
+      .approach-photo {
+        background-image:
+          linear-gradient(
+            180deg,
+            rgba(255, 253, 245, 0.05),
+            rgba(255, 253, 245, 0)
+          ),
+          url('assets/Adults_collaborating_around_table_2K_202609081242.jpeg');
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- =========================================================
+       HEADER
+       ========================================================= -->
+
+  <header
+    class="fixed inset-x-0 top-0 z-50 border-b border-alba-blue/10 bg-alba-warm/95 shadow-[0_2px_12px_rgba(8,46,83,0.06)] backdrop-blur-md"
+  >
+    <nav
+      class="mx-auto flex max-w-[1500px] items-center justify-between px-5 py-4 md:px-10 lg:px-16"
+      aria-label="Navegación principal"
+    >
+
+
+  <!--
+    PLACEHOLDER DEL LOGOTIPO
+
+    Reemplazar este bloque por el archivo ORIGINAL del logotipo.
+    El logotipo completo a color debe utilizarse sobre este
+    fondo cálido.
+
+    NO redibujar ni reconstruir el logo.
+  -->
+  <a
+    href="#inicio"
+    class="flex shrink-0 items-center"
+    aria-label="Fundación Alba — Inicio"
+  >
+    <div
+      class="flex h-10 w-10 items-center justify-center rounded-sm bg-alba-blue font-spectral text-2xl font-semibold text-white"
+      aria-hidden="true"
+    >
+      A
+    </div>
+
+    <span class="ml-3 hidden text-sm font-semibold tracking-wide text-alba-blue sm:block">
+      Fundación Alba
+    </span>
+  </a>
+
+  <!-- Navegación desktop -->
+  <div class="hidden items-center gap-8 md:flex">
+
+    <a
+      href="#inicio"
+      data-nav="inicio"
+      class="nav-link text-sm font-semibold text-alba-blue hover:text-alba-yellow"
+    >
+      Inicio
+    </a>
+
+    <a
+      href="#acompanamiento"
+      data-nav="acompanamiento"
+      class="nav-link text-sm font-semibold text-alba-blue hover:text-alba-yellow"
+    >
+      Acompañamiento
+    </a>
+
+    <a
+      href="#persona-red"
+      data-nav="persona-red"
+      class="nav-link text-sm font-semibold text-alba-blue hover:text-alba-yellow"
+    >
+      Persona y red
+    </a>
+
+    <a
+      href="#enfoque"
+      data-nav="enfoque"
+      class="nav-link text-sm font-semibold text-alba-blue hover:text-alba-yellow"
+    >
+      Nuestro enfoque
+    </a>
+
+    <a
+      href="#contacto"
+      data-nav="contacto"
+      class="nav-link text-sm font-semibold text-alba-blue hover:text-alba-yellow"
+    >
+      Contacto
+    </a>
+
+  </div>
+
+  <!-- Navegación móvil mínima -->
+  <a
+    href="#contacto"
+    data-nav="contacto"
+    class="nav-link text-sm font-semibold text-alba-blue hover:text-alba-yellow md:hidden"
+  >
+    Contacto
+  </a>
+
+</nav>
+
+
+  </header>
+
+  <main>
+
+
+<!-- =========================================================
+   HERO/INICIO
+   ========================================================= -->
+<!-- Seccion Hero/Inicio -->
+
+
+<section
+  id="inicio"
+  class="relative overflow-hidden bg-alba-warm pt-[76px] md:min-h-screen"
+>
+
+  <!-- Fotografía de fondo en desktop -->
+
+  <div
+    class="absolute inset-0 hidden bg-cover bg-bottom md:block"
+    style="background-image: url('assets/Friends_looking_at_Buenos_Aires_2K_202609081126.jpeg');"
+    aria-hidden="true"
+  ></div>
+
+  <!-- Degradado cálido en desktop -->
+
+  <div
+    class="absolute inset-0 hidden bg-gradient-to-r from-[#FFFDF5] via-[#FFFDF5]/40 to-transparent md:block"
+    aria-hidden="true"
+  ></div>
+
+  <!-- Fotografía debajo del contenido en móvil -->
+
+  <div
+    class="relative aspect-video w-full bg-cover bg-bottom md:hidden"
+    style="background-image: url('assets/Friends_looking_at_Buenos_Aires_2K_202609081126.jpeg');"
+    aria-hidden="true"
+  ></div>
+
+  <!-- Contenido -->
+
+  <div
+    class="relative mx-auto flex max-w-[1500px] items-center px-6 py-20 sm:px-10 md:min-h-[calc(100vh-76px)] md:px-14 md:py-24 lg:px-20 xl:px-24"
+  >
+
+
+<div class="max-w-[650px]">
+
+  <div class="mb-7 h-[5px] w-16 bg-alba-yellow"></div>
+
+  <h1
+    class="font-spectral text-5xl leading-[1.05] tracking-[-0.02em] text-alba-blue sm:text-6xl lg:text-6xl xl:text-[68px]"
+  >
+    Un espacio para construir y sostener tu proceso.
+  </h1>
+
+  <p
+    class="mt-8 max-w-[590px] text-lg leading-8 text-alba-gray lg:text-xl"
+  >
+    Acompañamos a cada persona y a su red para construir herramientas,
+    fortalecer vínculos y sostener el proceso en el tiempo.
+  </p>
+
+  <div class="mt-10 flex flex-wrap items-center gap-5">
+
+    <a
+      href="#contacto"
+      class="inline-flex items-center justify-center bg-alba-blue px-7 py-4 text-sm font-semibold text-white hover:bg-alba-yellow hover:text-alba-blue"
+    >
+      Hablar con Alba
+    </a>
+
+    <a
+      href="#acompanamiento"
+      class="inline-flex items-center justify-center px-2 py-4 text-sm font-semibold text-alba-blue hover:text-alba-yellow"
+    >
+      Conocé cómo acompañamos
+      <span class="ml-2 text-base">↓</span>
+    </a>
+
+  </div>
+
+</div>
+
+
+  </div>
+
+</section>
+
+<!-- Fin Seccion Hero/Inicio -->
+
+<!-- =========================================================
+       ACOMPAÑAMIENTO
+       ========================================================= -->
+
+<!-- Seccion Acompañamiento -->
+
+<section
+  id="acompanamiento"
+  class="relative overflow-hidden bg-alba-warm"
+>
+
+  <div class="mx-auto grid max-w-[1500px] md:grid-cols-[18%_82%]">
+
+
+<!-- Gesto amarillo -->
+<div class="hidden min-h-[620px] md:block">
+  <div class="h-full w-full bg-alba-yellow"></div>
+</div>
+
+<div class="flex items-center px-6 py-24 sm:px-10 md:min-h-[620px] md:px-14 lg:px-20 xl:px-24">
+
+  <div class="max-w-[780px]">
+
+    <p class="mb-5 text-xs font-bold uppercase tracking-[0.18em] text-alba-gray">
+      Acompañamiento
+    </p>
+
+    <h2
+      class="font-spectral text-4xl leading-tight text-alba-blue sm:text-5xl lg:text-6xl"
+    >
+      Construir herramientas, construir autonomía.
+    </h2>
+
+    <div class="mt-8 h-px w-20 bg-alba-gray/35"></div>
+
+    <p
+      class="mt-8 max-w-[720px] text-lg leading-8 text-alba-gray"
+    >
+      En Alba entendemos cada proceso de manera integral.
+      Acompañamos para que cada persona pueda construir herramientas
+      propias y desarrollar la autonomía necesaria para sostener su
+      proceso en el tiempo.
+    </p>
+
+  </div>
+
+</div>
+
+
+  </div>
+
+</section>
+
+<!-- Fin Seccion Acompañamiento -->
+
+<!-- =========================================================
+       SECCION PERSONA Y RED
+       ========================================================= -->
+
+<!-- Seccion Persona y Red -->
+
+<section
+  id="persona-red"
+  class="bg-alba-blue"
+>
+
+  <div class="mx-auto grid max-w-[1500px] md:grid-cols-2">
+
+
+<!-- Persona -->
+<div class="flex min-h-[540px] items-center px-6 py-20 sm:px-10 md:px-14 lg:px-20 xl:px-24">
+
+  <div class="max-w-[620px]">
+
+    <p class="mb-5 text-xs font-bold uppercase tracking-[0.18em] text-alba-yellow">
+      Persona y red
+    </p>
+
+    <h2
+      class="font-spectral text-4xl leading-tight text-white sm:text-5xl lg:text-6xl"
+    >
+      Acompañar requiere herramientas.
+    </h2>
+
+    <p
+      class="mt-8 text-lg leading-8 text-white/80"
+    >
+      En Alba entendemos que acompañar a alguien también requiere
+      herramientas. Trabajamos con la persona y con quienes forman
+      parte de su red para fortalecer vínculos y encontrar formas de
+      acompañar que contribuyan al proceso sin reemplazarlo.
+    </p>
+
+  </div>
+
+</div>
+
+
+<!-- Red -->
+<div
+  class="flex min-h-[540px] items-center bg-alba-warm px-6 py-20 sm:px-10 md:px-14 lg:px-20 xl:px-24"
+>
+
+  <div class="max-w-[620px]">
+
+    <p class="mb-5 text-xs font-bold uppercase tracking-[0.18em] text-alba-gray">
+      Una red que acompaña
+    </p>
+
+    <div class="mb-7 h-[5px] w-14 bg-alba-yellow"></div>
+
+    <p
+      class="text-lg leading-8 text-alba-gray"
+    >
+      La recuperación no ocurre de manera aislada. Las personas
+      significativas pueden formar parte del proceso y desarrollar
+      herramientas para acompañar sin sustituir la responsabilidad
+      de quien lo transita.
+    </p>
+
+  </div>
+
+</div>
+
+
+  </div>
+
+</section>
+
+<!-- Fin Seccion Persona y Red -->
+
+<!-- =========================================================
+       SECCION NUESTRO ENFOQUE
+       ========================================================= -->
+
+<!-- Seccion Nuestro Enfoque -->
+
+<section
+  id="enfoque"
+  class="relative overflow-hidden bg-alba-warm md:min-h-[760px]"
+>
+
+  <!-- Fotografía de fondo en desktop -->
+
+  <div
+    class="approach-photo absolute inset-0 hidden md:block"
+    aria-hidden="true"
+  ></div>
+
+  <!-- Capa adicional para asegurar legibilidad en desktop -->
+
+  <div
+    class="absolute inset-0 hidden bg-gradient-to-r from-[#FFFDF5] via-[#FFFDF5]/40 to-transparent md:block"
+    aria-hidden="true"
+  ></div>
+
+  <!-- Fotografía debajo del contenido en móvil -->
+
+  <div
+    class="relative aspect-video w-full bg-cover bg-center md:hidden"
+    style="background-image: url('assets/Adults_collaborating_around_table_2K_202609081242.jpeg');"
+    aria-hidden="true"
+  ></div>
+
+  <div
+    class="relative mx-auto flex max-w-[1500px] items-center px-6 py-20 sm:px-10 md:min-h-[760px] md:px-14 md:py-24 lg:px-20 xl:px-24"
+  >
+
+
+<div class="max-w-[720px]">
+
+  <p class="mb-5 text-xs font-bold uppercase tracking-[0.18em] text-alba-gray">
+    Nuestro enfoque
+  </p>
+
+  <h2
+    class="font-spectral text-4xl leading-[1.05] text-alba-blue sm:text-5xl lg:text-6xl"
+  >
+    Rigor para acompañar.<br>
+    Humanidad para hacerlo posible.
+  </h2>
+
+  <p
+    class="mt-8 max-w-[680px] text-lg leading-8 text-alba-gray"
+  >
+    En Alba combinamos conocimiento y experiencia profesional con una
+    mirada humana sobre cada proceso. El trabajo conjunto de distintas
+    disciplinas permite integrar perspectivas y construir una mirada
+    más completa sobre cada situación.
+  </p>
+
+  <div class="mt-12 max-w-[680px] border-l-4 border-alba-yellow pl-6">
+
+    <h3
+      class="font-spectral text-2xl leading-tight text-alba-blue sm:text-3xl"
+    >
+      También revisamos nuestra propia práctica.
+    </h3>
+
+    <p
+      class="mt-5 text-base leading-7 text-alba-gray"
+    >
+      Alba cuenta con un Sistema de Gestión basado en ISO 9001:2015
+      que permite evaluar sus procesos, analizar lo que ocurre y
+      revisar cómo trabaja para mejorar de manera continua.
+    </p>
+
+  </div>
+
+</div>
+
+
+  </div>
+
+</section>
+
+<!-- Fin Seccion Nuestro Enfoque -->
+
+<!-- =========================================================
+       SECCION CONTACTO
+       ========================================================= -->
+
+<!-- Seccion Contacto -->
+
+<section
+  id="contacto"
+  class="bg-alba-blue"
+>
+
+  <div class="mx-auto grid max-w-[1500px] md:grid-cols-[58%_42%]">
+
+
+<!-- Texto -->
+<div class="flex min-h-[560px] items-center px-6 py-24 sm:px-10 md:px-14 lg:px-20 xl:px-24">
+
+  <div class="max-w-[700px]">
+
+    <p class="mb-5 text-xs font-bold uppercase tracking-[0.18em] text-alba-yellow">
+      Contacto
+    </p>
+
+    <h2
+      class="font-spectral text-4xl leading-tight text-white sm:text-5xl lg:text-6xl"
+    >
+      A veces, el primer paso es simplemente hablar.
+    </h2>
+
+    <p
+      class="mt-8 max-w-[620px] text-lg leading-8 text-white/80"
+    >
+      Si estás buscando orientación para vos o para alguien de tu red,
+      podés comunicarte con Alba. Estamos para escucharte y ayudarte
+      a conocer cómo podemos acompañar.
+    </p>
+
+  </div>
+
+</div>
+
+
+<!-- Datos -->
+<div
+  class="flex min-h-[560px] items-center bg-alba-yellow px-6 py-20 sm:px-10 md:px-12 lg:px-16"
+>
+
+  <div class="w-full max-w-[480px]">
+
+    <div class="space-y-8">
+
+      <!-- WhatsApp -->
+
+
+<a
+href="https://wa.me/549115678910"
+class="group flex items-center gap-5"
+target="_blank"
+rel="noopener noreferrer"
+
+>
+
+<img
+src="assets/whatsapp.svg"
+alt=""
+class="h-10 w-10 shrink-0"
+aria-hidden="true"
+/>
+
+  <span>
+    <span class="block text-xs font-bold uppercase tracking-[0.14em] text-alba-gray">
+      WhatsApp
+    </span>
+
+
+<span class="mt-1 block text-lg font-semibold text-alba-blue group-hover:text-alba-gray">
+  +54 9 11 567 8910
+</span>
+
+<span class="mt-1 block text-sm leading-6 text-alba-gray">
+  Horario: lunes a viernes · 9 a 18 h
+</span>
+
+
+  </span>
+
+</a>
+
+
+      <!-- Email -->
+
+
+<a
+href="mailto:hola@fundacionalba.org"
+class="group flex items-center gap-5"
+
+>
+
+<span
+class="material-symbols-outlined flex h-10 w-10 shrink-0 items-center justify-center text-[28px] text-alba-blue"
+aria-hidden="true"
+
+>
+
+
+mail
+
+
+  </span>
+
+  <span>
+    <span class="block text-xs font-bold uppercase tracking-[0.14em] text-alba-gray">
+      Email
+    </span>
+
+
+<span class="mt-1 block text-lg font-semibold text-alba-blue group-hover:text-alba-gray">
+  hola@fundacionalba.org
+</span>
+
+<span class="mt-1 block text-sm leading-6 text-alba-gray">
+  Responderemos a la brevedad.
+</span>
+
+
+  </span>
+
+</a>
+
+
+      <!-- Sede -->
+      <a
+        href="#"
+        class="group flex items-center gap-5"
+        aria-label="Sede Fundación Alba"
+      >
+
+        <span
+          class="material-symbols-outlined flex h-10 w-10 shrink-0 items-center justify-center text-[30px] text-alba-blue"
+          aria-hidden="true"
+        >
+          place
+        </span>
+
+        <span>
+          <span class="block text-xs font-bold uppercase tracking-[0.14em] text-alba-gray">
+            Sede
+          </span>
+
+          <span class="mt-1 block text-lg font-semibold text-alba-blue group-hover:text-alba-gray">
+            Rosario 465, 4.º 18, CABA
+          </span>
+        </span>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+  </div>
+
+</section>
+
+<!-- Fin Seccion Contacto -->
+
+  </main>
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+
+  <footer
+    class="bg-alba-warm"
+  >
+    <div
+      class="mx-auto max-w-[1500px] px-6 py-14 sm:px-10 md:px-14 lg:px-20 xl:px-24"
+    >
+
+
+  <div class="grid gap-10 border-b border-alba-gray/20 pb-12 md:grid-cols-[1fr_auto]">
+
+    <!-- Identidad -->
+    <div>
+
+      <!--
+        PLACEHOLDER DEL LOGOTIPO DEL FOOTER
+
+        Reemplazar por el logotipo original.
+      -->
+      <div class="flex items-center">
+
+        <div
+          class="flex h-10 w-10 items-center justify-center rounded-sm bg-alba-blue font-spectral text-2xl font-semibold text-white"
+          aria-hidden="true"
+        >
+          A
+        </div>
+
+        <span class="ml-3 text-sm font-semibold tracking-wide text-alba-blue">
+          Fundación Alba
+        </span>
+
+      </div>
+
+      <p class="mt-5 max-w-[430px] text-sm leading-6 text-alba-gray">
+        Un espacio para construir y sostener tu proceso.
+      </p>
+
+    </div>
+
+
+    <!-- Datos -->
+    <div class="text-sm text-alba-gray md:text-right">
+
+      <p>+54 9 11 567 8910</p>
+      <p class="mt-1">hola@fundacionalba.org</p>
+      <p class="mt-1">Rosario 465, 4.º 18, CABA</p>
+
+    </div>
+
+  </div>
+
+
+  <div class="flex flex-col gap-4 pt-7 text-xs text-alba-gray sm:flex-row sm:items-center sm:justify-between">
+
+    <p>
+      © Fundación Alba
+    </p>
+
+    <!--
+      DATOS INSTITUCIONALES PENDIENTES
+
+      Evaluar posteriormente:
+      - referencia al Sistema de Gestión basado en ISO 9001:2015;
+      - redes sociales;
+      - año/copyright definitivo;
+      - otros datos institucionales.
+    -->
+
+    <p>
+      Información institucional
+    </p>
+
+  </div>
+
+</div>
+
+
+  </footer>
+
+</body>
+</html>
