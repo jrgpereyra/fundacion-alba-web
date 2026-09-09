@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="480.58054mm"
+   width="484.81387mm"
    height="79.566879mm"
-   viewBox="0 0 480.58053 79.56688"
+   viewBox="0 0 484.81387 79.56688"
    version="1.1"
    id="svg1"
    xmlns="http://www.w3.org/2000/svg"
@@ -13,7 +13,7 @@
      id="defs1" />
   <g
      id="layer4"
-     transform="translate(-45.136288,-6.555711)"
+     transform="translate(-45.136283,-6.555711)"
      style="display:none">
     <rect
        style="fill:#082e53;fill-opacity:0.536392;stroke-width:0.367076;stroke-dasharray:0.367076, 0.367076;paint-order:fill markers stroke"
@@ -107,7 +107,7 @@
     <g
        id="g1"
        style="display:inline;fill:#082e53;fill-opacity:1"
-       transform="matrix(4.7201727,0,0,4.7201727,-50.255343,-856.73132)">
+       transform="matrix(4.7201727,0,0,4.7201727,-39.672009,-856.73132)">
       <path
          class="cls-1"
          d="m 52.628207,200.57225 v -0.15081 l 0.772583,-0.381 v -5.07735 l -0.772583,-0.38365 v -0.14817 h 4.7625 v 1.6219 H 57.24254 l -0.613833,-1.09538 h -2.058459 v 2.2225 h 1.402292 l 0.502708,-0.79375 h 0.150813 v 2.0373 h -0.150813 l -0.508,-0.78317 h -1.397 v 2.39977 l 0.910167,0.381 v 0.15081 z"
@@ -157,7 +157,7 @@
     <g
        id="g2"
        style="display:inline;fill:#082e53;fill-opacity:1"
-       transform="matrix(4.7201727,0,0,4.7201727,-44.612984,-856.76593)">
+       transform="matrix(4.7201727,0,0,4.7201727,-34.02965,-856.76593)">
       <path
          class="cls-1"
          d="m 108.36533,200.66486 v -0.15082 l 0.57679,-0.31485 2.40771,-5.72029 h 0.65088 l 2.38125,5.70971 0.63235,0.32543 v 0.15082 h -2.67758 v -0.15082 l 0.80962,-0.32543 -0.66146,-1.61661 h -2.2225 l -0.66145,1.61661 0.77258,0.32543 v 0.15082 z m 2.10079,-2.60615 h 1.80446 l -0.90223,-2.21192 z"
