@@ -1,0 +1,94 @@
+/* Tipografías de la identidad (autohospedadas, latin) */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('../fonts/open-sans-latin.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../fonts/spectral-600-latin.woff2') format('woff2');
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #FFFDF5;
+  color: #082E53;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* El header debe tener siempre prioridad visual sobre el contenido */
+section {
+  scroll-margin-top: 76px;
+}
+
+/* Animación sutil para elementos interactivos */
+a {
+  transition:
+    color 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease
+}
+
+/* Línea gráfica de hover para links de contenido (recurso del anchor, no text-decoration) */
+.content-link {
+  position: relative;
+}
+
+.content-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: var(--link-line-offset, -4px);
+  height: 3px;
+  width: 100%;
+  background-color: #FFB700;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 250ms ease;
+}
+
+.content-link:hover::after {
+  transform: scaleX(1);
+}
+
+.approach-photo {
+  background-image:
+    url('../images/enfoque.jpeg');
+
+  background-size: cover;
+  background-position: center;
+}
+
+/* Overlay cálido compartido para las fotografías con texto (Hero y Enfoque, desktop) */
+.photo-scrim {
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(255, 253, 245, 0.90) 0%,
+      rgba(255, 253, 245, 0.78) 45%,
+      rgba(255, 253, 245, 0.25) 65%,
+      rgba(255, 253, 245, 0) 82%
+    );
+}
+
+@media (max-width: 767px) {
+
+  .approach-photo {
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(255, 253, 245, 0.05),
+        rgba(255, 253, 245, 0)
+      ),
+      url('../images/enfoque.jpeg');
+  }
+}
