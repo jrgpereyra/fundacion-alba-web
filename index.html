@@ -101,17 +101,22 @@
 
     .approach-photo {
       background-image:
-        linear-gradient(
-          90deg,
-          rgba(255, 253, 245, 0.94) 0%,
-          rgba(255, 253, 245, 0.72) 30%,
-          rgba(255, 253, 245, 0.18) 58%,
-          rgba(255, 253, 245, 0) 82%
-        ),
         url('assets/images/enfoque.jpeg');
 
       background-size: cover;
       background-position: center;
+    }
+
+    /* Overlay cálido compartido para las fotografías con texto (Hero y Enfoque, desktop) */
+    .photo-scrim {
+      background-image:
+        linear-gradient(
+          90deg,
+          rgba(255, 253, 245, 0.90) 0%,
+          rgba(255, 253, 245, 0.78) 45%,
+          rgba(255, 253, 245, 0.25) 65%,
+          rgba(255, 253, 245, 0) 82%
+        );
     }
 
     @media (max-width: 767px) {
@@ -235,7 +240,7 @@
   <!-- Degradado cálido en desktop -->
 
   <div
-    class="absolute inset-0 hidden bg-gradient-to-r from-alba-warm via-alba-warm/40 to-transparent md:block"
+    class="photo-scrim absolute inset-0 hidden md:block"
     aria-hidden="true"
   ></div>
 
@@ -402,7 +407,7 @@
   <div class="max-w-[620px]">
 
     <p class="mb-5 text-xs font-bold uppercase tracking-[0.18em] text-alba-gray section-subtitle">
-      La familia también necesita acompañamiento.
+      La familia necesita herramientas.
     </p>
 
     <div class="mb-7 h-[5px] w-14 bg-alba-yellow"></div>
@@ -410,9 +415,7 @@
     <p
       class="text-lg leading-8 text-alba-gray section-description"
     >
-      Alba cuenta con espacios de acompañamiento para familias, donde pueden compartir
-      experiencias, incorporar herramientas y aprender cómo ayudar sin reemplazar
-      el proceso de la persona.
+      Alba cuenta con espacios para familias, donde pueden compartir experiencias, aprender nuevas formas de acompañar y entender cómo ayudar sin reemplazar el proceso de la persona.
     </p>
 
   </div>
@@ -441,6 +444,11 @@
 
   <div
     class="approach-photo absolute inset-0 hidden md:block"
+    aria-hidden="true"
+  ></div>
+
+  <div
+    class="photo-scrim absolute inset-0 hidden md:block"
     aria-hidden="true"
   ></div>
 
