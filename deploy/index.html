@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Fundación Alba</title>
+
+  <!-- Tailwind (CSS estático local de producción) -->
+
+  <link rel="stylesheet" href="assets/css/tailwind.css">
+
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+</head>
+
+<body>
+
+  <!-- =========================================================
+       HEADER
+       ========================================================= -->
+
+  <header
+    class="fixed inset-x-0 top-0 z-50 border-b border-alba-blue/10 bg-alba-warm/95 shadow-[0_2px_12px_rgba(8,46,83,0.06)] backdrop-blur-md"
+  >
+    <nav
+      class="mx-auto flex max-w-[1500px] items-center justify-between px-5 py-4 md:px-10 lg:px-16"
+      aria-label="Navegación principal"
+    >
+
+
+  <a
+    href="#inicio"
+    class="flex shrink-0 items-center"
+    aria-label="Fundación Alba — Inicio"
+  >
+    <img
+      src="assets/brand/Alba.isologotipo.horizontal.svg"
+      alt="Fundación Alba"
+      class="h-10 w-auto translate-y-[-7px]"
+    />
+  </a>
+
+  <!-- Navegación desktop -->
+  <div class="hidden items-center gap-8 md:flex">
+
+    <a
+     href="#inicio"
+     class="text-sm font-semibold text-alba-blue hover:text-alba-yellow"
+    >
+      Inicio
+    </a>
+
+    <a
+     href="#acompanamiento"
+     class="text-sm font-semibold text-alba-blue hover:text-alba-yellow"
+    >
+      Acompañamiento
+    </a>
+
+    <a
+     href="#persona-red"
+     class="text-sm font-semibold text-alba-blue hover:text-alba-yellow"
+    >
+      Persona y red
+    </a>
+
+    <a
+     href="#enfoque"
+     class="text-sm font-semibold text-alba-blue hover:text-alba-yellow"
+    >
+      Nuestro enfoque
+    </a>
+
+    <a
+     href="#contacto"
+     class="text-sm font-semibold text-alba-blue hover:text-alba-yellow"
+    >
+      Contacto
+    </a>
+
+  </div>
+
+  <!-- Navegación móvil mínima -->
+  <a
+     href="#contacto"
+     class="text-sm font-semibold text-alba-blue hover:text-alba-yellow md:hidden"
+  >
+    Contacto
+  </a>
+
+</nav>
+
+
+  </header>
+
+  <main>
+
+
+<!-- =========================================================
+   HERO/INICIO
+   ========================================================= -->
+<!-- Seccion Hero/Inicio -->
+
+
+<section
+  id="inicio"
+  class="relative overflow-hidden bg-alba-warm pt-[76px] md:min-h-screen"
+>
+
+  <!-- Fotografía de fondo en desktop -->
+
+  <div
+    class="absolute inset-0 hidden bg-cover bg-bottom md:block"
+    style="background-image: url('assets/images/hero.jpeg');"
+    aria-hidden="true"
+  ></div>
+
+  <!-- Degradado cálido en desktop -->
+
+  <div
+    class="photo-scrim absolute inset-0 hidden md:block"
+    aria-hidden="true"
+  ></div>
+
+  <!-- Fotografía debajo del contenido en móvil -->
+
+  <div
+    class="relative aspect-video w-full bg-cover bg-bottom md:hidden"
+    style="background-image: url('assets/images/hero.jpeg');"
+    aria-hidden="true"
+  ></div>
+
+  <!-- Contenido -->
+
+  <div
+    class="relative mx-auto flex max-w-[1500px] items-center px-6 py-20 sm:px-10 md:min-h-[calc(100vh-76px)] md:px-14 md:py-24 lg:px-20 xl:px-24"
+  >
+
+
+<div class="max-w-[650px]">
+
+  <div class="mb-7 h-[5px] w-16 bg-alba-yellow"></div>
+
+  <h1
+    class="font-spectral text-5xl leading-[1.05] tracking-[-0.02em] text-alba-blue sm:text-6xl xl:text-[68px] section-title"
+  >
+    Un espacio para construir y sostener tu proceso.
+  </h1>
+
+  <p
+    class="mt-8 max-w-[590px] text-lg leading-8 text-alba-gray lg:text-xl section-description"
+  >
+    Si buscás ayuda por un consumo problemático, para vos o para alguien cercano,
+    Alba es un espacio para empezar a trabajar sobre lo que está pasando.
+  </p>
+
+  <div class="mt-10 flex flex-wrap items-center gap-5">
+
+    <a
+      href="#contacto"
+      class="inline-flex items-center justify-center bg-alba-blue px-7 py-4 text-sm font-semibold text-white hover:bg-alba-yellow hover:text-alba-blue cta-primary"
+    >
+      Hablar con Alba
+    </a>
+
+    <a
+      href="#acompanamiento"
+      style="--link-line-offset: 10px;"
+      class="inline-flex items-center justify-center px-2 py-4 text-sm font-semibold text-alba-blue content-link cta-secondary"
+    >
+      Conocé cómo acompañamos
+      <span class="ml-2 text-base" aria-hidden="true">↓</span>
+    </a>
+
+  </div>
+
+</div>
+
+
+  </div>
+
+</section>
+
+<!-- Fin Seccion Hero/Inicio -->
+
+<!-- =========================================================
+       ACOMPAÑAMIENTO
+       ========================================================= -->
+
+<!-- Seccion Acompañamiento -->
+
+<section
+  id="acompanamiento"
+  class="relative overflow-hidden bg-alba-warm"
+>
+
+  <div class="mx-auto grid max-w-[1500px] md:grid-cols-[18%_82%]">
+
+
+<!-- Gesto amarillo -->
+<div class="hidden min-h-[620px] md:block">
+  <div class="h-full w-full bg-alba-yellow"></div>
+</div>
+
+<div class="flex items-center px-6 py-24 sm:px-10 md:min-h-[620px] md:px-14 lg:px-20 xl:px-24">
+
+  <div class="max-w-[780px]">
+
+    <p class="mb-5 text-xs font-bold uppercase tracking-[0.18em] text-alba-gray section-label">
+      Acompañamiento
+    </p>
+
+    <h2
+      class="font-spectral text-4xl leading-tight text-alba-blue sm:text-5xl lg:text-6xl section-title"
+    >
+      Construir herramientas, construir autonomía.
+    </h2>
+
+    <div class="mt-8 h-px w-20 bg-alba-gray/35"></div>
+
+    <p
+      class="mt-8 max-w-[720px] text-lg leading-8 text-alba-gray section-description"
+    >
+      En Alba acompañamos para que cada persona pueda construir sus propias
+      herramientas y sostener su proceso con mayor autonomía.
+    </p>
+
+  </div>
+
+</div>
+
+
+  </div>
+
+</section>
+
+<!-- Fin Seccion Acompañamiento -->
+
+<!-- =========================================================
+       SECCION PERSONA Y RED
+       ========================================================= -->
+
+<!-- Seccion Persona y Red -->
+
+<section
+  id="persona-red"
+  class="bg-alba-blue"
+>
+
+  <div class="mx-auto grid max-w-[1500px] md:grid-cols-2">
+
+
+<!-- Persona -->
+<div class="flex min-h-[540px] items-center px-6 py-20 sm:px-10 md:px-14 lg:px-20 xl:px-24">
+
+  <div class="max-w-[620px]">
+
+    <p class="mb-5 text-xs font-bold uppercase tracking-[0.18em] text-alba-yellow section-label">
+      Persona y red
+    </p>
+
+    <h2
+      class="font-spectral text-4xl leading-tight text-white sm:text-5xl lg:text-6xl section-title"
+    >
+      El proceso también se construye con quienes están cerca.
+    </h2>
+
+    <p
+      class="mt-8 text-lg leading-8 text-white/80 section-description"
+    >
+      En Alba trabajamos con cada persona y con quienes forman parte de su red:
+      su familia, amigos y otras personas cercanas.
+    </p>
+
+  </div>
+
+</div>
+
+
+<!-- Red -->
+<div
+  class="flex min-h-[540px] items-center bg-alba-warm px-6 py-20 sm:px-10 md:px-14 lg:px-20 xl:px-24"
+>
+
+  <div class="max-w-[620px]">
+
+    <p class="mb-5 text-xs font-bold uppercase tracking-[0.18em] text-alba-gray section-subtitle">
+      La familia necesita herramientas.
+    </p>
+
+    <div class="mb-7 h-[5px] w-14 bg-alba-yellow"></div>
+
+    <p
+      class="text-lg leading-8 text-alba-gray section-description"
+    >
+      Alba cuenta con espacios para familias, donde pueden compartir experiencias, aprender nuevas formas de acompañar y entender cómo ayudar sin reemplazar el proceso de la persona.
+    </p>
+
+  </div>
+
+</div>
+
+
+  </div>
+
+</section>
+
+<!-- Fin Seccion Persona y Red -->
+
+<!-- =========================================================
+       SECCION NUESTRO ENFOQUE
+       ========================================================= -->
+
+<!-- Seccion Nuestro Enfoque -->
+
+<section
+  id="enfoque"
+  class="relative overflow-hidden bg-alba-warm md:min-h-[760px]"
+>
+
+  <!-- Fotografía de fondo en desktop -->
+
+  <div
+    class="approach-photo absolute inset-0 hidden md:block"
+    aria-hidden="true"
+  ></div>
+
+  <div
+    class="photo-scrim absolute inset-0 hidden md:block"
+    aria-hidden="true"
+  ></div>
+
+  <!-- Fotografía debajo del contenido en móvil -->
+
+  <div
+    class="relative aspect-video w-full bg-cover bg-center md:hidden"
+    style="background-image: url('assets/images/enfoque.jpeg');"
+    aria-hidden="true"
+  ></div>
+
+  <div
+    class="relative mx-auto flex max-w-[1500px] items-center px-6 py-20 sm:px-10 md:min-h-[760px] md:px-14 md:py-24 lg:px-20 xl:px-24"
+  >
+
+
+<div class="max-w-[720px]">
+
+  <p class="mb-5 text-xs font-bold uppercase tracking-[0.18em] text-alba-gray section-label">
+    Nuestro enfoque
+  </p>
+
+  <h2
+    class="font-spectral text-4xl leading-[1.05] text-alba-blue sm:text-5xl lg:text-6xl section-title"
+  >
+    Rigor para acompañar.<br>
+    Humanidad para hacerlo posible.
+  </h2>
+
+  <p
+    class="mt-8 max-w-[680px] text-lg leading-8 text-alba-gray section-description"
+  >
+    Trabajamos integrando distintas disciplinas y miradas para comprender
+    cada situación y acompañar de manera responsable.
+  </p>
+
+  <div class="mt-12 max-w-[680px] border-l-4 border-alba-yellow pl-6 section-callout">
+
+    <h3
+      class="font-spectral text-2xl leading-tight text-alba-blue sm:text-3xl section-callout-title"
+    >
+      También revisamos nuestra propia práctica.
+    </h3>
+
+    <p
+      class="mt-5 text-base leading-7 text-alba-gray section-callout-description"
+    >
+      Alba cuenta con un Sistema de Gestión basado en ISO 9001:2015
+      que permite evaluar sus procesos, analizar lo que ocurre y
+      revisar cómo trabaja para mejorar de manera continua.
+    </p>
+
+  </div>
+
+</div>
+
+
+  </div>
+
+</section>
+
+<!-- Fin Seccion Nuestro Enfoque -->
+
+<!-- =========================================================
+       SECCION CONTACTO
+       ========================================================= -->
+
+<!-- Seccion Contacto -->
+
+<section
+  id="contacto"
+  class="bg-alba-blue"
+>
+
+  <div class="mx-auto grid max-w-[1500px] md:grid-cols-[58%_42%]">
+
+
+<!-- Texto -->
+<div class="flex min-h-[560px] items-center px-6 py-24 sm:px-10 md:px-14 lg:px-20 xl:px-24">
+
+  <div class="max-w-[700px]">
+
+    <p class="mb-5 text-xs font-bold uppercase tracking-[0.18em] text-alba-yellow section-label">
+      Contacto
+    </p>
+
+    <h2
+      class="font-spectral text-4xl leading-tight text-white sm:text-5xl lg:text-6xl section-title"
+    >
+      El primer paso es simplemente hablar.
+    </h2>
+
+    <p
+      class="mt-8 max-w-[620px] text-lg leading-8 text-white/80 section-description"
+    >
+      Si buscás ayuda para vos o para alguien cercano, podés comunicarte con Alba.
+      Estamos para escucharte y orientarte.
+    </p>
+
+  </div>
+
+</div>
+
+
+<!-- Datos -->
+<div
+  class="flex min-h-[560px] items-center bg-alba-yellow px-6 py-20 sm:px-10 md:px-12 lg:px-16"
+>
+
+  <div class="w-full max-w-[480px]">
+
+    <div class="space-y-8">
+
+      <!-- WhatsApp -->
+
+
+      <a
+        href="https://wa.me/549115678910"
+        class="group flex items-center gap-5 content-link contact-item"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+
+        <img
+          src="assets/contact/whatsapp.svg"
+          alt=""
+          class="h-10 w-10 shrink-0"
+          loading="lazy"
+        />
+
+        <span>
+          <span class="block text-xs font-bold uppercase tracking-[0.14em] text-alba-gray contact-label">
+            WhatsApp
+          </span>
+
+          <span class="mt-1 block text-lg font-semibold text-alba-blue contact-value">
+            +54 9 11 567 8910
+          </span>
+
+          <span class="mt-1 block text-sm leading-6 text-alba-gray contact-detail">
+            Horario: lunes a viernes · 9 a 18 h
+          </span>
+        </span>
+
+      </a>
+
+
+      <!-- Email -->
+
+
+      <a
+        href="mailto:hola@fundacionalba.org"
+        class="group flex items-center gap-5 content-link contact-item"
+      >
+
+        <span
+          class="flex h-10 w-10 shrink-0 items-center justify-center text-alba-blue"
+          aria-hidden="true"
+        >
+          <img
+            src="assets/contact/mail.svg"
+            alt=""
+            class="h-7 w-7"
+            loading="lazy"
+          />
+        </span>
+
+        <span>
+          <span class="block text-xs font-bold uppercase tracking-[0.14em] text-alba-gray contact-label">
+            Email
+          </span>
+
+          <span class="mt-1 block text-lg font-semibold text-alba-blue contact-value">
+            hola@fundacionalba.org
+          </span>
+        </span>
+
+      </a>
+
+
+      <!-- Sede -->
+      <a
+        href="https://www.google.com/maps/search/?api=1&query=Rosario+465%2C+4%C2%BA+18%2C+CABA"
+        class="group flex items-center gap-5 content-link contact-item"
+        aria-label="Sede Fundación Alba"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+
+        <span
+          class="flex h-10 w-10 shrink-0 items-center justify-center text-alba-blue"
+          aria-hidden="true"
+        >
+          <img
+            src="assets/contact/place.svg"
+            alt=""
+            class="h-[30px] w-[30px]"
+            loading="lazy"
+          />
+        </span>
+
+        <span>
+          <span class="block text-xs font-bold uppercase tracking-[0.14em] text-alba-gray contact-label">
+            Sede
+          </span>
+
+          <span class="mt-1 block text-lg font-semibold text-alba-blue contact-value">
+            Rosario 465, 4.º 18, CABA
+          </span>
+        </span>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+  </div>
+
+</section>
+
+<!-- Fin Seccion Contacto -->
+
+  </main>
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+
+  <footer
+    class="bg-alba-warm"
+  >
+    <div
+      class="mx-auto max-w-[1500px] px-6 py-14 sm:px-10 md:px-14 lg:px-20 xl:px-24"
+    >
+
+
+  <div class="grid gap-y-10 border-b border-alba-gray/20 pb-12 md:grid-cols-[58%_42%] md:gap-x-0">
+
+    <!-- Identidad -->
+    <div>
+
+      <div class="flex items-center">
+
+        <img
+          src="assets/brand/Alba.isologotipo.svg"
+          alt="Fundación Alba"
+          class="h-28 w-auto"
+        />
+
+      </div>
+
+      <p class="mt-5 max-w-[430px] text-sm leading-6 text-alba-gray footer-tagline">
+        Un espacio para construir<br>y sostener tu proceso.
+      </p>
+
+    </div>
+
+
+    <!-- Redes -->
+    <div class="md:pl-[57px] lg:pl-[77px] xl:pl-[79px]">
+      <p>
+        Seguinos
+      </p>
+
+      <ul class="mt-4 flex flex-col items-start gap-3">
+        <li>
+          <a href="#" class="inline-flex items-center gap-2">
+            <img
+              src="assets/social/instagram.svg"
+              alt=""
+              class="h-4 w-4"
+              loading="lazy"
+            />
+            Instagram
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="inline-flex items-center gap-2">
+            <img
+              src="assets/social/facebook.svg"
+              alt=""
+              class="h-4 w-4"
+              loading="lazy"
+            />
+            Facebook
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="inline-flex items-center gap-2">
+            <img
+              src="assets/social/youtube.svg"
+              alt=""
+              class="h-4 w-4"
+              loading="lazy"
+            />
+            YouTube
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="inline-flex items-center gap-2">
+            <img
+              src="assets/social/tiktok.svg"
+              alt=""
+              class="h-4 w-4"
+              loading="lazy"
+            />
+            TikTok
+          </a>
+        </li>
+      </ul>
+    </div>
+
+
+  </div>
+
+
+  <div class="flex flex-col gap-4 pt-7 text-xs text-alba-gray sm:flex-row sm:items-center sm:justify-between">
+
+    <p>
+      © Fundación Alba
+    </p>
+
+    <!--
+      DATOS INSTITUCIONALES PENDIENTES
+
+      Evaluar posteriormente:
+      - referencia al Sistema de Gestión basado en ISO 9001:2015;
+      - redes sociales;
+      - año/copyright definitivo;
+      - otros datos institucionales.
+    -->
+
+  </div>
+
+</div>
+
+
+  </footer>
+
+</body>
+</html>
