@@ -1,0 +1,1 @@
+{"devDependencies": {"@tailwindcss/cli": "^4.1.13", "tailwindcss": "^4.1.13"}, "name": "fundacion-alba-web", "private": true, "scripts": {"build:css": "tailwindcss -i assets/css/tailwind.input.css -o assets/css/tailwind.css --minify"}, "version": "1.0.0"}

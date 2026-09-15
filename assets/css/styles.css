@@ -21,7 +21,7 @@ html {
 
 body {
   background: #FFFDF5;
-  color: #082E53;
+  color: #17261B;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -50,7 +50,7 @@ a {
   bottom: var(--link-line-offset, -4px);
   height: 3px;
   width: 100%;
-  background-color: #FFB700;
+  background-color: #E3A03A;
   transform: scaleX(0);
   transform-origin: left center;
   transition: transform 250ms ease;
@@ -58,6 +58,11 @@ a {
 
 .content-link:hover::after {
   transform: scaleX(1);
+}
+
+/* Subrayado hover visible sobre el panel Accent (links de contacto) */
+.contact-item::after {
+  background-color: #17261B;
 }
 
 .approach-photo {
@@ -73,10 +78,10 @@ a {
   background-image:
     linear-gradient(
       90deg,
-      rgba(255, 253, 245, 0.90) 0%,
-      rgba(255, 253, 245, 0.78) 45%,
-      rgba(255, 253, 245, 0.25) 65%,
-      rgba(255, 253, 245, 0) 82%
+      rgba(255, 254, 250, 0.90) 0%,
+      rgba(255, 254, 250, 0.78) 45%,
+      rgba(255, 254, 250, 0.25) 65%,
+      rgba(255, 254, 250, 0) 82%
     );
 }
 
@@ -86,8 +91,8 @@ a {
     background-image:
       linear-gradient(
         180deg,
-        rgba(255, 253, 245, 0.05),
-        rgba(255, 253, 245, 0)
+        rgba(255, 254, 250, 0.05),
+        rgba(255, 254, 250, 0)
       ),
       url('../images/enfoque.jpeg');
   }

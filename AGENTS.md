@@ -4,10 +4,10 @@ Static single-page site. `index.html` + `assets/`. No framework, no bundler, no 
 
 ## Build (Tailwind is local, no CDN)
 
-- `tailwind.config.js` + `assets/css/tailwind.input.css` are the build sources.
+- `assets/css/tailwind.input.css` (CSS-first con `@theme`) is the build source. Deps locales: `tailwindcss` + `@tailwindcss/cli` (v4).
 - Regenerate after touching any Tailwind class in `index.html`:
-  `npx -y tailwindcss@3.4.18 -i assets/css/tailwind.input.css -o assets/css/tailwind.css --config tailwind.config.js --minify`
-- No `package.json` / `node_modules` committed on purpose (`npx -y` resolves remotely).
+  `npm run build:css`
+- `package.json` + `package-lock.json` committed on purpose (`node_modules/` ignored); `npm install` desde cero permite recompilar.
 - Verify coverage after rebuild: every `class="..."` token in `index.html` must have a rule in `tailwind.css` (custom classes live in `assets/css/styles.css`, not Tailwind).
 
 ## Paths

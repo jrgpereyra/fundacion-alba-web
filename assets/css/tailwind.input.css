@@ -1,3 +1,11 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-alba-primary: #17261B;
+  --color-alba-accent: #E3A03A;
+  
+  --color-alba-secondary: #343530;
+  --color-alba-surface: #FFFEFA;
+
+  --font-spectral: "Spectral", serif;
+}
