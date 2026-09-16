@@ -60,6 +60,11 @@ a {
   transform: scaleX(1);
 }
 
+/* Sección activa durante el scroll: mismo subrayado que el hover */
+.content-link.is-active::after {
+  transform: scaleX(1);
+}
+
 /* Subrayado hover visible sobre el panel Accent (links de contacto) */
 .contact-item::after {
   background-color: #17261B;
