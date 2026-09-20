@@ -44,6 +44,16 @@
     }
 
     /* --------------------------------------------------
+       IDENTIDAD TIPOGRÁFICA
+    -------------------------------------------------- */
+
+    .alba-name {
+      font-family: "Spectral", serif;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+    }
+
+    /* --------------------------------------------------
        HEADER
     -------------------------------------------------- */
 
@@ -57,10 +67,7 @@
     }
 
     .header-brand {
-      font-family: "Open Sans", sans-serif;
-      font-size: 0.78rem;
-      font-weight: 800;
-      letter-spacing: 0.08em;
+      font-size: 0.92rem;
     }
 
     .header-label {
@@ -83,22 +90,13 @@
       overflow: hidden;
     }
 
-    .hero-kicker {
-      margin: 0 0 4vh;
-      font-family: "Open Sans", sans-serif;
-      font-size: clamp(1rem, 1.5vw, 1.35rem);
-      font-weight: 700;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-    }
-
     .hero-title {
       margin: 0;
       max-width: 1250px;
       font-family: "Spectral", serif;
       font-size: clamp(4.5rem, 10.8vw, 11rem);
       font-weight: 800;
-      line-height: 0.76;
+      line-height: 0.82;
       letter-spacing: -0.06em;
     }
 
@@ -108,7 +106,7 @@
 
     .hero-title .italic {
       font-style: italic;
-      font-weight: 700;
+      font-weight: 800;
     }
 
     .hero-bottom {
@@ -150,18 +148,13 @@
       letter-spacing: -0.055em;
     }
 
-    .place-list {
-      margin-top: 10vw;
-      border-top: 2px solid var(--ink);
-    }
-
-    .place-list p {
-      margin: 0;
-      padding: 2.2rem 0;
-      border-bottom: 1px solid rgba(36, 71, 58, 0.45);
+    .place-copy {
+      margin: 10vw 0 0;
+      max-width: 1100px;
       font-family: "Spectral", serif;
-      font-size: clamp(1.35rem, 2.2vw, 2.1rem);
+      font-size: clamp(1.5rem, 2.4vw, 2.3rem);
       line-height: 1.25;
+      font-weight: 600;
     }
 
     /* --------------------------------------------------
@@ -194,7 +187,7 @@
 
     .need p {
       margin: 5vw 0 0;
-      max-width: 800px;
+      max-width: 1000px;
       font-family: "Open Sans", sans-serif;
       font-size: clamp(1.8rem, 3.5vw, 3.5rem);
       line-height: 1;
@@ -223,7 +216,7 @@
 
     .collaborate-body {
       margin-top: 8vw;
-      max-width: 1000px;
+      max-width: 1100px;
     }
 
     .collaborate-body p {
@@ -231,15 +224,16 @@
     }
 
     .collaborate-body .main-copy {
+      max-width: 1000px;
       font-family: "Open Sans", sans-serif;
-      font-size: clamp(1.5rem, 2.4vw, 2.3rem);
-      line-height: 1.15;
+      font-size: clamp(1.8rem, 3.5vw, 3.5rem);
+      line-height: 1;
       font-weight: 600;
-      letter-spacing: -0.025em;
+      letter-spacing: -0.04em;
     }
 
     .collaborate-body .secondary-copy {
-      margin-top: 5vw;
+      margin-top: 6vw;
       font-family: "Spectral", serif;
       font-size: clamp(2.7rem, 5vw, 5rem);
       line-height: 0.92;
@@ -251,7 +245,7 @@
       margin-top: 5vw;
       display: flex;
       flex-direction: column;
-      gap: 1.2rem;
+      gap: 1.5rem;
     }
 
     .contact-link {
@@ -266,8 +260,15 @@
     }
 
     .contact-link img {
-      width: 2rem;
-      height: 2rem;
+      width: 1em;
+      height: 1em;
+      flex: 0 0 1em;
+    }
+
+    .contact-link .contact-data {
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.15em;
     }
 
     /* --------------------------------------------------
@@ -358,7 +359,7 @@
 
       .hero-title {
         font-size: clamp(4rem, 17vw, 7rem);
-        line-height: 0.78;
+        line-height: 0.84;
       }
 
       .hero-bottom {
@@ -381,12 +382,8 @@
         font-size: clamp(3.5rem, 15vw, 6rem);
       }
 
-      .place-list {
+      .place-copy {
         margin-top: 14vw;
-      }
-
-      .place-list p {
-        padding: 1.7rem 0;
         font-size: clamp(1.3rem, 6vw, 2rem);
       }
 
@@ -416,12 +413,21 @@
         margin-top: 14vw;
       }
 
+      .collaborate-body .main-copy {
+        font-size: clamp(1.6rem, 7vw, 2.5rem);
+      }
+
       .collaborate-body .secondary-copy {
+        margin-top: 12vw;
         font-size: clamp(2.8rem, 13vw, 5rem);
       }
 
       .contact-links {
         margin-top: 10vw;
+      }
+
+      .contact-link {
+        font-size: clamp(1.1rem, 5vw, 1.4rem);
       }
 
       .signature {
@@ -453,8 +459,13 @@
 <body>
 
   <header>
-    <div class="header-brand">FUNDACIÓN ALBA</div>
-    <div class="header-label">Convocatoria a colaborar</div>
+    <div class="header-brand">
+      <span class="alba-name">FUNDACIÓN ALBA</span>
+    </div>
+
+    <div class="header-label">
+      Convocatoria a colaborar
+    </div>
   </header>
 
   <main>
@@ -463,19 +474,17 @@
 
     <section class="hero">
 
-      <p class="hero-kicker">Convocatoria</p>
-
       <h1 class="hero-title">
         <span class="line">Estamos</span>
-        <span class="line">construyendo</span>
-        <span class="line">un nuevo</span>
+        <span class="line italic">construyendo</span>
+        <span class="line italic">un nuevo</span>
         <span class="line italic">espacio</span>
       </h1>
 
       <div class="hero-bottom">
 
         <p>
-          FUNDACIÓN ALBA acompaña a personas con consumos problemáticos
+          <span class="alba-name">FUNDACIÓN ALBA</span> acompaña a personas con consumos problemáticos
           y a sus redes de contención.
         </p>
 
@@ -496,16 +505,12 @@
         <h2>Un lugar para encontrarse y compartir</h2>
       </div>
 
-      <div class="place-list">
-
-        <p>
-          Consultorios para terapias individuales,<br>
-          ámbitos para el trabajo grupal,<br>
-          actividades abiertas tanto a profesionales como a la comunidad,<br>
-          y encuentros con las familias y las redes de contención.
-        </p>
-
-      </div>
+      <p class="place-copy">
+        Consultorios para terapias individuales,<br>
+        ámbitos para el trabajo grupal,<br>
+        actividades abiertas tanto a profesionales como a la comunidad,<br>
+        y encuentros con las familias y las redes de contención.
+      </p>
 
     </section>
 
@@ -527,11 +532,11 @@
     </section>
 
 
-    <!-- CONVOCATORIA -->
+    <!-- QUÉ NECESITAMOS -->
 
     <section class="collaborate">
 
-      <h2>¿Cómo colaborar?</h2>
+      <h2>¿Qué necesitamos?</h2>
 
       <div class="collaborate-body">
 
@@ -541,37 +546,34 @@
         </p>
 
         <p class="secondary-copy">
-          Nos gustaría conversar con vos.
+          Si podés ayudarnos,<br> nos gustaría conversar con vos.
         </p>
 
         <div class="contact-links">
 
-          <a class="contact-link" href="#">
+          <!-- Reemplazar href y texto por el WhatsApp real -->
+
+          <a class="contact-link" href="tel:+54911XXXXXXXX">
             <img
               src="assets/contact/whatsapp.svg"
               alt=""
               aria-hidden="true"
             >
-            <span>WhatsApp</span>
+            <span class="contact-data">+54 9 11 XXX XXXX</span>
           </a>
 
-          <a class="contact-link" href="#">
+          <!-- Reemplazar href y texto por el email real -->
+
+          <a class="contact-link" href="mailto:correo@fundacionalba.org">
             <img
               src="assets/contact/mail.svg"
               alt=""
               aria-hidden="true"
             >
-            <span>email</span>
+            <span class="contact-data">correo@fundacionalba.org</span>
           </a>
 
-          <div class="contact-link">
-            <img
-              src="assets/contact/place.svg"
-              alt=""
-              aria-hidden="true"
-            >
-            <span>Sede<br>Rosario 465, 4.º 18, CABA</span>
-          </div>
+          <!-- La sede completa funciona como enlace a Google Maps -->
 
           <a
             class="contact-link"
@@ -579,7 +581,14 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span>Cómo llegar →</span>
+            <img
+              src="assets/contact/place.svg"
+              alt=""
+              aria-hidden="true"
+            >
+            <span class="contact-data">
+              Sede · Rosario 465, 4.º 18, CABA
+            </span>
           </a>
 
         </div>
@@ -654,6 +663,7 @@
     </section>
 
   </main>
+
 
   <script>
     const months = [
