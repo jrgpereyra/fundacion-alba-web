@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>FUNDACIÓN ALBA — Convocatoria</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&family=Spectral:ital,wght@0,600;0,700;0,800;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --green: #24473A;
+      --paper: #FFFFFC;
+      --ocre: #E3A03A;
+      --ink: #24473A;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Open Sans", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    /* --------------------------------------------------
+       HEADER
+    -------------------------------------------------- */
+
+    header {
+      position: relative;
+      z-index: 10;
+      padding: 28px 5vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header-brand {
+      font-family: "Open Sans", sans-serif;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+    }
+
+    .header-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* --------------------------------------------------
+       HERO
+    -------------------------------------------------- */
+
+    .hero {
+      min-height: calc(100vh - 90px);
+      padding: 5vh 5vw 9vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero-kicker {
+      margin: 0 0 4vh;
+      font-family: "Open Sans", sans-serif;
+      font-size: clamp(1rem, 1.5vw, 1.35rem);
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    .hero-title {
+      margin: 0;
+      max-width: 1250px;
+      font-family: "Spectral", serif;
+      font-size: clamp(4.5rem, 10.8vw, 11rem);
+      font-weight: 800;
+      line-height: 0.69;
+      letter-spacing: -0.06em;
+    }
+
+    .hero-title .line {
+      display: block;
+    }
+
+    .hero-title .italic {
+      font-style: italic;
+      font-weight: 700;
+    }
+
+    .hero-bottom {
+      margin-top: 9vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5vw;
+      align-items: end;
+    }
+
+    .hero-bottom p {
+      margin: 0;
+      max-width: none;
+      font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+      line-height: 1.08;
+      font-weight: 600;
+      letter-spacing: -0.035em;
+    }
+
+    .hero-note {
+      justify-self: end;
+      max-width: 620px;
+      font-family: "Open Sans", sans-serif !important;
+      font-size: clamp(1.5rem, 2.5vw, 2.5rem) !important;
+      line-height: 1.08 !important;
+      font-weight: 600 !important;
+      font-style: normal !important;
+      text-align: right;
+    }
+
+    /* --------------------------------------------------
+       LOGO / PRESENTACIÓN
+    -------------------------------------------------- */
+
+    .presentation {
+      background: var(--ocre);
+      min-height: 78vh;
+      padding: 7vw 5vw;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6vw;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .presentation-logo {
+      width: min(44vw, 650px);
+      max-width: none;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .presentation-copy {
+      max-width: 900px;
+    }
+
+    .presentation-copy p {
+      margin: 0;
+      font-family: "Open Sans", sans-serif;
+      font-size: clamp(2.2rem, 4.2vw, 4.8rem);
+      line-height: 0.98;
+      letter-spacing: -0.055em;
+      font-weight: 700;
+    }
+
+    .presentation-copy .secondary {
+      margin-top: 3rem;
+      font-size: clamp(1.7rem, 2.8vw, 3rem);
+      font-weight: 500;
+      letter-spacing: -0.035em;
+      line-height: 1.05;
+    }
+
+    /* --------------------------------------------------
+       EL LUGAR
+    -------------------------------------------------- */
+
+    .place {
+      padding: 12vw 5vw 13vw;
+    }
+
+    .place-heading {
+      max-width: 1150px;
+    }
+
+    .place-heading h2 {
+      margin: 0;
+      font-family: "Spectral", serif;
+      font-size: clamp(3.8rem, 7.5vw, 8rem);
+      font-weight: 800;
+      line-height: 0.82;
+      letter-spacing: -0.055em;
+    }
+
+    .place-list {
+      margin-top: 10vw;
+      border-top: 2px solid var(--ink);
+    }
+
+    .place-item {
+      padding: 2.2rem 0;
+      border-bottom: 1px solid rgba(36, 71, 58, 0.45);
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 5vw;
+      align-items: baseline;
+    }
+
+    .place-item span:first-child {
+      font-family: "Open Sans", sans-serif;
+      font-size: clamp(1.3rem, 2.2vw, 2.1rem);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+    }
+
+    .place-item span:last-child {
+      font-family: "Spectral", serif;
+      font-size: clamp(1.25rem, 1.8vw, 1.7rem);
+      line-height: 1.2;
+    }
+
+    /* --------------------------------------------------
+       NECESIDAD
+    -------------------------------------------------- */
+
+    .need {
+      background: var(--green);
+      color: var(--paper);
+      min-height: 72vh;
+      padding: 9vw 5vw;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .need-inner {
+      max-width: 1200px;
+    }
+
+    .need h2 {
+      margin: 0;
+      max-width: 1100px;
+      font-family: "Spectral", serif;
+      font-size: clamp(4rem, 9vw, 9rem);
+      font-weight: 800;
+      line-height: 0.8;
+      letter-spacing: -0.055em;
+    }
+
+    .need p {
+      margin: 5vw 0 0;
+      max-width: 800px;
+      font-family: "Open Sans", sans-serif;
+      font-size: clamp(1.8rem, 3.5vw, 3.5rem);
+      line-height: 1;
+      font-weight: 600;
+      letter-spacing: -0.04em;
+    }
+
+    /* --------------------------------------------------
+       CONVOCATORIA
+    -------------------------------------------------- */
+
+    .collaborate {
+      padding: 12vw 5vw 10vw;
+    }
+
+    .collaborate h2 {
+      margin: 0;
+      max-width: 1100px;
+      font-family: "Spectral", serif;
+      font-size: clamp(4rem, 9vw, 9rem);
+      font-weight: 800;
+      line-height: 0.8;
+      letter-spacing: -0.055em;
+    }
+
+    .collaborate-body {
+      margin-top: 8vw;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8vw;
+      align-items: start;
+    }
+
+    .collaborate-body p {
+      margin: 0;
+    }
+
+    .collaborate-body .main-copy {
+      font-family: "Open Sans", sans-serif;
+      font-size: clamp(1.4rem, 2.2vw, 2rem);
+      line-height: 1.15;
+      font-weight: 600;
+      letter-spacing: -0.025em;
+    }
+
+    .collaborate-body .secondary-copy {
+      font-family: "Spectral", serif;
+      font-size: clamp(2.7rem, 5vw, 5rem);
+      line-height: 0.88;
+      font-weight: 800;
+      letter-spacing: -0.05em;
+    }
+
+    .whatsapp {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-top: 3rem;
+      text-decoration: none;
+      color: var(--green);
+      font-family: "Open Sans", sans-serif;
+      font-size: clamp(1.1rem, 1.5vw, 1.4rem);
+      font-weight: 700;
+    }
+
+    .whatsapp img {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    /* --------------------------------------------------
+       FIRMA
+    -------------------------------------------------- */
+
+    .signature {
+      padding: 7vw 5vw 8vw;
+      border-top: 1px solid rgba(36, 71, 58, 0.25);
+    }
+
+    .signature-title {
+      margin: 0 0 5vw;
+      display: flex;
+      align-items: baseline;
+      gap: 0.25em;
+      line-height: 0.85;
+      letter-spacing: -0.05em;
+    }
+
+    .signature-title .somos {
+      font-family: "Open Sans", sans-serif;
+      font-size: clamp(2.5rem, 5vw, 5rem);
+      font-weight: 500;
+    }
+
+    .signature-title .alba {
+      font-family: "Spectral", serif;
+      font-size: clamp(4rem, 8vw, 8rem);
+      font-weight: 600;
+    }
+
+    .signature-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4vw 7vw;
+    }
+
+    .person {
+      padding-top: 1.2rem;
+      border-top: 1px solid rgba(36, 71, 58, 0.4);
+    }
+
+    .person-name {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .person-role {
+      margin-top: 0.3rem;
+      font-size: 0.95rem;
+      line-height: 1.3;
+    }
+
+    /* --------------------------------------------------
+       FOOTER
+    -------------------------------------------------- */
+
+    footer {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 4vw 5vw;
+      display: flex;
+      justify-content: space-between;
+      gap: 3rem;
+      align-items: flex-end;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    .footer-brand {
+      font-size: 0.9rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+    }
+
+    .footer-copy {
+      font-size: 0.8rem;
+      opacity: 0.8;
+      text-align: right;
+    }
+
+    /* --------------------------------------------------
+       MOBILE
+    -------------------------------------------------- */
+
+    @media (max-width: 760px) {
+
+      header {
+        padding: 22px 6vw;
+      }
+
+      .header-label {
+        display: none;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 7vh 6vw 12vh;
+      }
+
+      .hero-title {
+        font-size: clamp(4rem, 17vw, 7rem);
+        line-height: 0.72;
+      }
+
+      .hero-bottom {
+        margin-top: 8vh;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .hero-bottom p,
+      .hero-note {
+        font-size: clamp(1.35rem, 6.5vw, 2rem) !important;
+        text-align: left;
+      }
+
+      .presentation {
+        min-height: auto;
+        padding: 14vw 6vw 16vw;
+        grid-template-columns: 1fr;
+        gap: 12vw;
+      }
+
+      .presentation-logo {
+        width: 82%;
+        margin: 0 auto;
+      }
+
+      .presentation-copy p {
+        font-size: clamp(2rem, 9vw, 4rem);
+      }
+
+      .presentation-copy .secondary {
+        margin-top: 2rem;
+        font-size: clamp(1.5rem, 7vw, 2.5rem);
+      }
+
+      .place {
+        padding: 16vw 6vw;
+      }
+
+      .place-heading h2 {
+        font-size: clamp(3.5rem, 15vw, 6rem);
+      }
+
+      .place-list {
+        margin-top: 14vw;
+      }
+
+      .place-item {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+        padding: 1.7rem 0;
+      }
+
+      .need {
+        min-height: 65vh;
+        padding: 14vw 6vw;
+      }
+
+      .need h2 {
+        font-size: clamp(4rem, 16vw, 7rem);
+      }
+
+      .need p {
+        margin-top: 12vw;
+        font-size: clamp(1.6rem, 7vw, 2.5rem);
+      }
+
+      .collaborate {
+        padding: 16vw 6vw 14vw;
+      }
+
+      .collaborate h2 {
+        font-size: clamp(4rem, 16vw, 7rem);
+      }
+
+      .collaborate-body {
+        margin-top: 14vw;
+        grid-template-columns: 1fr;
+        gap: 5rem;
+      }
+
+      .collaborate-body .secondary-copy {
+        font-size: clamp(2.8rem, 13vw, 5rem);
+      }
+
+      .signature {
+        padding: 12vw 6vw;
+      }
+
+      .signature-title {
+        margin-bottom: 10vw;
+        flex-wrap: wrap;
+      }
+
+      .signature-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      footer {
+        padding: 8vw 6vw;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .footer-copy {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="header-brand">FUNDACIÓN ALBA</div>
+    <div class="header-label">Convocatoria a colaborar</div>
+  </header>
+
+
+  <main>
+
+    <!-- APERTURA -->
+
+    <section class="hero">
+
+      <p class="hero-kicker">Convocatoria</p>
+
+      <h1 class="hero-title">
+        <span class="line">Estamos</span>
+        <span class="line">construyendo</span>
+        <span class="line">un nuevo</span>
+        <span class="line italic">espacio</span>
+      </h1>
+
+      <div class="hero-bottom">
+
+        <p>
+          FUNDACIÓN ALBA acompaña a personas con consumos problemáticos
+          y a sus redes de contención.
+        </p>
+
+        <p class="hero-note">
+          La sede nos permitirá ampliar las posibilidades de encuentro.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- PRESENTACIÓN -->
+
+    <section class="presentation">
+
+      <div class="presentation-mark">
+        <img
+          class="presentation-logo"
+          src="assets/brand/Alba.isologotipo.blanco.svg"
+          alt="FUNDACIÓN ALBA"
+        >
+      </div>
+
+      <div class="presentation-copy">
+
+        <p>
+          FUNDACIÓN ALBA acompaña a personas con consumos problemáticos
+          y a sus redes de contención.
+        </p>
+
+        <p class="secondary">
+          La sede nos permitirá ampliar las posibilidades de encuentro.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- EL LUGAR -->
+
+    <section class="place">
+
+      <div class="place-heading">
+
+        <h2>
+          Un lugar para encontrarse y compartir
+        </h2>
+
+      </div>
+
+
+      <div class="place-list">
+
+        <div class="place-item">
+          <span>Consultorios</span>
+          <span>para terapias individuales,</span>
+        </div>
+
+        <div class="place-item">
+          <span>Trabajo grupal</span>
+          <span>ámbitos para el trabajo grupal,</span>
+        </div>
+
+        <div class="place-item">
+          <span>Actividades abiertas</span>
+          <span>actividades abiertas tanto a profesionales como a la comunidad,</span>
+        </div>
+
+        <div class="place-item">
+          <span>Familias y redes</span>
+          <span>y encuentros con las familias y las redes de contención.</span>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- NECESIDAD -->
+
+    <section class="need">
+
+      <div class="need-inner">
+
+        <h2>Para hacerlo posible</h2>
+
+        <p>
+          Necesitamos acondicionar el espacio.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- CONVOCATORIA -->
+
+    <section class="collaborate">
+
+      <h2>¿Cómo colaborar?</h2>
+
+      <div class="collaborate-body">
+
+        <div>
+
+          <p class="main-copy">
+            Recursos, equipamiento, servicios, conocimientos,
+            aportes económicos o contactos.
+          </p>
+
+          <a class="whatsapp" href="#">
+            <img
+              src="assets/contact/whatsapp.svg"
+              alt=""
+              aria-hidden="true"
+            >
+            <span>WhatsApp · 11 0000-0000</span>
+          </a>
+
+        </div>
+
+        <div>
+
+          <p class="secondary-copy">
+            Nos gustaría conversar con vos.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- FIRMA -->
+
+    <section class="signature">
+
+      <h2 class="signature-title">
+        <span class="somos">somos</span>
+        <span class="alba">ALBA</span>
+      </h2>
+
+      <div class="signature-grid">
+
+        <div class="person">
+          <div class="person-name">Pablo Gianni</div>
+          <div class="person-role">Presidente</div>
+        </div>
+
+        <div class="person">
+          <div class="person-name">Federico Miranda</div>
+          <div class="person-role">Director del Área de Calidad</div>
+        </div>
+
+        <div class="person">
+          <div class="person-name">Karina</div>
+          <div class="person-role">[Función pendiente]</div>
+        </div>
+
+        <div class="person">
+          <div class="person-name">Gloria</div>
+          <div class="person-role">[Función pendiente]</div>
+        </div>
+
+        <div class="person">
+          <div class="person-name">Sergio</div>
+          <div class="person-role">[Función pendiente]</div>
+        </div>
+
+        <div class="person">
+          <div class="person-name">Rodo</div>
+          <div class="person-role">[Función pendiente]</div>
+        </div>
+
+        <div class="person">
+          <div class="person-name">Jorge Pereyra</div>
+          <div class="person-role">Identidad y diseño</div>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <p class="footer-brand">FUNDACIÓN ALBA</p>
+
+    <p class="footer-copy">
+      © FUNDACIÓN ALBA<br>
+      Convocatoria a colaborar
+    </p>
+
+  </footer>
+
+</body>
+</html>
