@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body class="bg-[#FFFFFC] text-alba-primary antialiased">
+<body id="convocatoria" class="bg-[#FFFFFC] text-alba-primary antialiased">
 
   <header class="relative z-10 flex items-center justify-between px-[5vw] py-[28px] max-[760px]:px-[6vw] max-[760px]:py-[22px]">
     <div class="text-[0.92rem]">
@@ -25,7 +25,7 @@
     </div>
 
     <div class="text-[0.72rem] font-semibold uppercase tracking-[0.08em] max-[760px]:hidden">
-      Convocatoria a colaborar
+      Convocatoria
     </div>
   </header>
 
@@ -35,11 +35,17 @@
 
     <section class="flex min-h-[calc(100vh-90px)] flex-col justify-center overflow-hidden px-[5vw] pb-[9vh] pt-[5vh] max-[760px]:min-h-[auto] max-[760px]:px-[6vw] max-[760px]:pb-[12vh] max-[760px]:pt-[7vh]">
 
-      <h1 class="m-0 max-w-[1250px] font-spectral text-[clamp(4.5rem,10.8vw,11rem)] font-extrabold leading-[0.82] tracking-[-0.06em] max-[760px]:text-[clamp(4rem,17vw,7rem)] max-[760px]:leading-[0.84]">
-        <span class="block">Estamos</span>
+      <!-- <h1 class="m-0 max-w-[1250px] font-spectral text-[clamp(4.5rem,10.8vw,11rem)] font-extrabold leading-[0.82] tracking-[-0.06em] max-[760px]:text-[clamp(4rem,17vw,7rem)] max-[760px]:leading-[0.84]">
+        <span class="block font-extrabold">Estamos</span>
         <span class="block font-extrabold italic">construyendo</span>
         <span class="block font-extrabold italic">un nuevo</span>
         <span class="block font-extrabold italic">espacio</span>
+      </h1>  -->
+      <h1 class="m-0 max-w-[1250px] font-spectral text-[clamp(4.5rem,10.8vw,11rem)] font-extrabold leading-[0.82] tracking-[-0.06em] max-[760px]:text-[clamp(4rem,17vw,7rem)] max-[760px]:leading-[0.84]">
+        <span class="block font-extrabold">Estamos</span>
+        <span class="block font-extrabold">construyendo</span>
+        <span class="block font-extrabold">un nuevo</span>
+        <span class="block font-extrabold">espacio</span>
       </h1>
 
       <div class="mt-[9vh] max-w-[1100px] max-[760px]:mt-[8vh]">
@@ -66,12 +72,12 @@
         <h2 class="m-0 font-spectral text-[clamp(3.8rem,7.5vw,8rem)] font-extrabold leading-[0.82] tracking-[-0.055em] max-[760px]:text-[clamp(3.5rem,15vw,6rem)]">Un lugar para encontrarse y compartir</h2>
       </div>
 
-      <p class="mb-0 ml-0 mr-0 mt-[10vw] max-w-[1100px] font-spectral text-[clamp(1.5rem,2.4vw,2.3rem)] font-semibold leading-[1.25] max-[760px]:mt-[14vw] max-[760px]:text-[clamp(1.3rem,6vw,2rem)]">
-        Consultorios para terapias individuales,<br>
-        ámbitos para el trabajo grupal,<br>
-        actividades abiertas tanto a profesionales como a la comunidad,<br>
-        y encuentros con las familias y las redes de contención.
-      </p>
+        <ul class="mt-[10vw] max-w-[1200px] list-disc list-inside  text-[clamp(1.5rem,2.4vw,2.3rem)] font-semibold leading-[1.25] max-[760px]:mt-[14vw] max-[760px]:text-[clamp(1.3rem,6vw,2rem)]">
+    <li>Consultorios para terapias individuales</li>
+    <li>Ámbitos para el trabajo grupal</li>
+    <li>Actividades abiertas tanto a profesionales como a la comunidad</li>
+    <li>Encuentros con las familias y las redes de contención.</li>
+  </ul>
 
     </section>
 
@@ -212,19 +218,19 @@
 
     <!-- CIERRE -->
 
-    <section class="flex min-h-[55vh] flex-col items-start justify-end bg-alba-primary px-[5vw] pb-[5vw] pt-[8vw] text-[#FFFFFC] max-[760px]:min-h-[45vh] max-[760px]:px-[6vw] max-[760px]:pb-[8vw] max-[760px]:pt-[12vw]">
+    <section class="flex min-h-[55vh] flex-col items-start justify-end bg-alba-primary px-[5vw] pb-[5vw] pt-[8vw] text-[#FFFFFC] max-[760px]:min-h-[45vh] max-[760px]:items-center max-[760px]:px-[6vw] max-[760px]:pb-[8vw] max-[760px]:pt-[12vw]">
 
-      <img
-        class="mb-12 w-[min(420px,55vw)] max-[760px]:mb-8 max-[760px]:w-[min(340px,72vw)]"
-        src="assets/brand/Alba.isologotipo.blanco.svg"
-        alt="FUNDACIÓN ALBA"
-      >
+  <img
+    class="mb-12 w-[min(420px,55vw)] max-[760px]:mb-8 max-[760px]:w-[min(340px,72vw)]"
+    src="assets/brand/Alba.isologotipo.blanco.svg"
+    alt="FUNDACIÓN ALBA"
+  >
 
-      <p class="m-0 text-[clamp(0.9rem,1.2vw,1.1rem)] font-semibold tracking-[0.04em]">
-        Buenos Aires · <span id="current-date"></span>
-      </p>
+  <p class="m-0 text-[clamp(0.9rem,1.2vw,1.1rem)] font-semibold tracking-[0.04em] max-[760px]:text-center">
+    Buenos Aires · <span id="current-date"></span>
+  </p>
 
-    </section>
+</section>
 
   </main>
 

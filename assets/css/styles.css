@@ -102,3 +102,28 @@ a {
       url('../images/enfoque.jpeg');
   }
 }
+
+
+/*CONVOCATORIA*/
+
+#convocatoria ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+#convocatoria ul li{
+  padding-bottom: 1.5rem;
+}
+
+#convocatoria section:last-of-type {
+  /* desktop: queda como está */
+}
+
+@media (max-width: 760px) {
+  #convocatoria section:last-of-type {
+    align-items: center;
+  }
+
+  #convocatoria section:last-of-type p {
+    text-align: center;
+  }
+}
