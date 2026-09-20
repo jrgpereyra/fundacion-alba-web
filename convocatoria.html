@@ -8,7 +8,7 @@
   <title>Fundación Alba — Convocatoria a colaborar</title>
   <meta
     name="description"
-    content="Fundación Alba: estamos construyendo un nuevo espacio. Convocatoria abierta a colaborar."
+    content="Fundación Alba está haciendo lugar para acompañar: un nuevo espacio para personas con consumos problemáticos y sus redes. Convocatoria abierta a colaborar."
   />
 
   <!-- Tailwind (CSS estático local de producción, compartido con la landing) -->
@@ -22,31 +22,66 @@
 <body class="text-alba-primary">
 
   <!-- =========================================================
-       CABECERA MÍNIMA (identificación de la pieza, no navegación)
+       HEADER (componente compartido con la landing)
        ========================================================= -->
 
   <header
-    class="border-b border-alba-primary/10 bg-alba-surface"
+    class="fixed inset-x-0 top-0 z-50 border-b border-alba-primary/10 bg-alba-surface/95 shadow-[0_2px_12px_rgba(31,51,36,0.06)] backdrop-blur-md"
   >
-    <div
+    <nav
       class="mx-auto flex max-w-[1500px] items-center justify-between px-5 py-4 md:px-10 lg:px-16"
+      aria-label="Navegación principal"
     >
 
-      <span class="flex shrink-0 items-center" aria-label="Fundación Alba">
-        <img
-          src="assets/brand/Alba.isologotipo.horizontal.svg"
-          alt="Fundación Alba"
-          class="h-8 w-auto md:h-10"
-        />
-      </span>
+  <a
+    href="index.html"
+    class="flex shrink-0 items-center"
+    aria-label="Fundación Alba — Inicio"
+  >
+    <img
+      src="assets/brand/Alba.isologotipo.horizontal.svg"
+      alt="Fundación Alba"
+      class="h-8 w-auto translate-y-[-7px] md:h-10"
+    />
+  </a>
 
-      <p
-        class="text-xs font-bold uppercase tracking-[0.18em] text-alba-secondary"
-      >
-        Convocatoria
-      </p>
+  <!-- Navegación desktop -->
+  <div class="hidden items-center gap-8 md:flex">
 
-    </div>
+    <a
+     href="#el-espacio"
+     class="text-sm font-semibold text-alba-primary content-link"
+    >
+      El espacio
+    </a>
+
+    <a
+     href="#colaborar"
+     class="text-sm font-semibold text-alba-primary content-link"
+    >
+      Colaborar
+    </a>
+
+    <a
+     href="#contacto"
+     class="text-sm font-semibold text-alba-primary content-link"
+    >
+      Contacto
+    </a>
+
+  </div>
+
+  <!-- Navegación móvil mínima -->
+  <a
+     href="#contacto"
+     class="text-sm font-semibold text-alba-primary content-link md:hidden"
+  >
+    Contacto
+  </a>
+
+</nav>
+
+
   </header>
 
   <main>
@@ -56,36 +91,57 @@
          ========================================================= -->
 
     <section
-      class="bg-alba-surface"
+      id="inicio"
+      class="bg-alba-surface pt-[76px]"
       aria-labelledby="titulo-apertura"
     >
       <div
-        class="mx-auto flex max-w-[1500px] items-center px-6 py-24 sm:px-10 md:min-h-[78vh] md:px-14 md:py-28 lg:px-20 xl:px-24"
+        class="mx-auto max-w-[1500px] px-6 pb-24 pt-14 sm:px-10 md:px-14 md:pb-32 md:pt-20 lg:px-20 xl:px-24"
       >
 
-        <div class="max-w-[900px]">
-
-          <p class="mb-5 text-xs font-bold uppercase tracking-[0.18em] text-alba-secondary">
-            Fundación Alba — Convocatoria a colaborar
+        <div class="flex items-baseline justify-between gap-6">
+          <p class="text-xs font-bold uppercase tracking-[0.18em] text-alba-secondary">
+            Fundación Alba — Convocatoria
           </p>
+          <p class="shrink-0 font-spectral text-sm text-alba-secondary/70" aria-hidden="true">
+            01
+          </p>
+        </div>
 
-          <div class="mb-7 h-[5px] w-16 bg-alba-accent" aria-hidden="true"></div>
+        <div class="mt-8 h-[5px] w-16 bg-alba-accent" aria-hidden="true"></div>
 
-          <h1
-            id="titulo-apertura"
-            class="max-w-[14ch] font-spectral text-5xl leading-[1.02] tracking-[-0.02em] text-alba-primary sm:text-6xl lg:text-7xl xl:text-[84px]"
-          >
-            Estamos construyendo un nuevo espacio
-          </h1>
+        <h1
+          id="titulo-apertura"
+          class="mt-8 max-w-[16ch] font-spectral text-[44px] leading-[1.02] tracking-[-0.02em] text-alba-primary sm:text-6xl lg:text-7xl xl:text-[88px]"
+        >
+          Estamos haciendo lugar para acompañar.
+        </h1>
+
+        <div class="mt-12 grid gap-10 md:grid-cols-[58%_42%] md:gap-x-0">
 
           <p
-            class="mt-8 max-w-[620px] text-lg leading-8 text-alba-secondary"
+            class="max-w-[620px] text-lg leading-8 text-alba-secondary"
           >
             Fundación Alba acompaña a personas con consumos problemáticos y a sus redes de contención.
           </p>
 
+          <div class="md:pl-14 lg:pl-20">
+            <a
+              href="#porque"
+              style="--link-line-offset: 10px;"
+              class="inline-flex items-center justify-center px-2 py-4 text-sm font-semibold text-alba-primary content-link cta-secondary"
+            >
+              Leer la convocatoria
+              <span class="ml-2 text-base" aria-hidden="true">↓</span>
+            </a>
+          </div>
+
+        </div>
+
+        <div class="mt-12 max-w-[720px] border-l-4 border-alba-accent pl-6">
+
           <p
-            class="mt-6 max-w-[620px] text-xl leading-9 text-alba-primary"
+            class="font-spectral text-2xl leading-snug text-alba-primary sm:text-3xl"
           >
             La sede nos permitirá ampliar las posibilidades de encuentro.
           </p>
@@ -96,78 +152,122 @@
     </section>
 
     <!-- =========================================================
-         02 — EL LUGAR
+         02 — POR QUÉ UNA SEDE
          ========================================================= -->
 
     <section
+      id="porque"
       class="border-t border-alba-secondary/15 bg-alba-surface"
-      aria-labelledby="titulo-lugar"
+      aria-labelledby="titulo-porque"
     >
       <div
-        class="mx-auto max-w-[1500px] px-6 py-24 sm:px-10 md:px-14 md:py-28 lg:px-20 xl:px-24"
+        class="mx-auto max-w-[1500px] px-6 py-24 sm:px-10 md:px-14 md:py-32 lg:px-20 xl:px-24"
       >
 
-        <div class="max-w-[900px]">
-
-          <p class="mb-5 text-xs font-bold uppercase tracking-[0.18em] text-alba-secondary">
-            El lugar
+        <div class="flex items-baseline justify-between gap-6">
+          <p class="text-xs font-bold uppercase tracking-[0.18em] text-alba-secondary">
+            Por qué una sede
           </p>
-
-          <h2
-            id="titulo-lugar"
-            class="max-w-[16ch] font-spectral text-4xl leading-[1.05] tracking-[-0.02em] text-alba-primary sm:text-5xl lg:text-6xl"
-          >
-            Un lugar para encontrarse y compartir
-          </h2>
-
-          <div class="mt-8 h-px w-20 bg-alba-secondary/35" aria-hidden="true"></div>
-
-          <!--
-            Enumeración visual del mismo texto aprobado (sin cards, sin iconos).
-            Cada línea conserva las palabras y la puntuación originales;
-            solo se distribuyen en líneas para darles presencia.
-          -->
-
-          <ul class="mt-8" aria-label="Posibilidades del espacio">
-
-            <li class="border-t border-alba-secondary/20 py-5">
-              <p class="font-spectral text-2xl leading-snug text-alba-primary md:text-[34px] md:leading-[1.25]">
-                Consultorios para terapias individuales,
-              </p>
-            </li>
-
-            <li class="border-t border-alba-secondary/20 py-5">
-              <p class="font-spectral text-2xl leading-snug text-alba-primary md:text-[34px] md:leading-[1.25]">
-                ámbitos para el trabajo grupal,
-              </p>
-            </li>
-
-            <li class="border-t border-alba-secondary/20 py-5">
-              <p class="font-spectral text-2xl leading-snug text-alba-primary md:text-[34px] md:leading-[1.25]">
-                actividades abiertas tanto a profesionales como a la comunidad,
-              </p>
-            </li>
-
-            <li class="border-y border-alba-secondary/20 py-5">
-              <p class="font-spectral text-2xl leading-snug text-alba-primary md:text-[34px] md:leading-[1.25]">
-                y encuentros con las familias y las redes de contención.
-              </p>
-            </li>
-
-          </ul>
-
+          <p class="shrink-0 font-spectral text-sm text-alba-secondary/70" aria-hidden="true">
+            02
+          </p>
         </div>
+
+        <h2
+          id="titulo-porque"
+          class="mt-10 max-w-[24ch] font-spectral text-3xl leading-[1.15] tracking-[-0.01em] text-alba-primary sm:text-4xl lg:max-w-[28ch] lg:text-5xl"
+        >
+          Alba genera las condiciones para que cada persona pueda construir y sostener su propio proceso.
+        </h2>
+
+        <p
+          class="mt-10 max-w-[620px] text-lg leading-8 text-alba-secondary md:ml-auto"
+        >
+          El espacio no es el fin. Es la condición para que el acompañamiento pueda suceder.
+        </p>
 
       </div>
     </section>
 
     <!-- =========================================================
-         03 — LA NECESIDAD (escena intencionalmente simple)
+         03 — EL ESPACIO
+         ========================================================= -->
+
+    <section
+      id="el-espacio"
+      class="border-t border-alba-secondary/15 bg-alba-surface"
+      aria-labelledby="titulo-espacio"
+    >
+      <div
+        class="mx-auto max-w-[1500px] px-6 py-24 sm:px-10 md:px-14 md:py-32 lg:px-20 xl:px-24"
+      >
+
+        <div class="flex items-baseline justify-between gap-6">
+          <p class="text-xs font-bold uppercase tracking-[0.18em] text-alba-secondary">
+            El espacio
+          </p>
+          <p class="shrink-0 font-spectral text-sm text-alba-secondary/70" aria-hidden="true">
+            03
+          </p>
+        </div>
+
+        <h2
+          id="titulo-espacio"
+          class="mt-10 max-w-[16ch] font-spectral text-4xl leading-[1.05] tracking-[-0.02em] text-alba-primary sm:text-5xl lg:text-6xl"
+        >
+          Un lugar para encontrarse y compartir
+        </h2>
+
+        <div class="mt-8 h-px w-20 bg-alba-secondary/35" aria-hidden="true"></div>
+
+        <!--
+          Enumeración editorial del texto aprobado (sin cards, sin iconos).
+          La numeración aporta estructura; las palabras y la puntuación
+          se conservan, solo distribuidas en líneas.
+        -->
+
+        <ol class="mt-10">
+
+          <li class="grid grid-cols-[3rem_1fr] items-baseline gap-4 border-t border-alba-secondary/20 py-6 sm:grid-cols-[4rem_1fr]">
+            <span class="font-spectral text-xl text-alba-accent" aria-hidden="true">01</span>
+            <p class="font-spectral text-2xl leading-snug text-alba-primary md:text-[34px] md:leading-[1.25]">
+              Consultorios para terapias individuales,
+            </p>
+          </li>
+
+          <li class="grid grid-cols-[3rem_1fr] items-baseline gap-4 border-t border-alba-secondary/20 py-6 sm:grid-cols-[4rem_1fr]">
+            <span class="font-spectral text-xl text-alba-accent" aria-hidden="true">02</span>
+            <p class="font-spectral text-2xl leading-snug text-alba-primary md:text-[34px] md:leading-[1.25]">
+              ámbitos para el trabajo grupal,
+            </p>
+          </li>
+
+          <li class="grid grid-cols-[3rem_1fr] items-baseline gap-4 border-t border-alba-secondary/20 py-6 sm:grid-cols-[4rem_1fr]">
+            <span class="font-spectral text-xl text-alba-accent" aria-hidden="true">03</span>
+            <p class="font-spectral text-2xl leading-snug text-alba-primary md:text-[34px] md:leading-[1.25]">
+              actividades abiertas tanto a profesionales como a la comunidad,
+            </p>
+          </li>
+
+          <li class="grid grid-cols-[3rem_1fr] items-baseline gap-4 border-y border-alba-secondary/20 py-6 sm:grid-cols-[4rem_1fr]">
+            <span class="font-spectral text-xl text-alba-accent" aria-hidden="true">04</span>
+            <p class="font-spectral text-2xl leading-snug text-alba-primary md:text-[34px] md:leading-[1.25]">
+              y encuentros con las familias y las redes de contención.
+            </p>
+          </li>
+
+        </ol>
+
+      </div>
+    </section>
+
+    <!-- =========================================================
+         04 — LO QUE FALTA (escena deliberadamente austera)
          ========================================================= -->
 
     <section
       class="bg-alba-primary"
-      aria-labelledby="titulo-necesidad"
+      aria-labelledby="titulo-falta"
     >
       <div
         class="mx-auto flex max-w-[1500px] items-center px-6 py-28 sm:px-10 md:min-h-[62vh] md:px-14 md:py-32 lg:px-20 xl:px-24"
@@ -175,14 +275,19 @@
 
         <div class="max-w-[800px]">
 
-          <p class="mb-5 text-xs font-bold uppercase tracking-[0.18em] text-alba-accent">
-            La necesidad
-          </p>
+          <div class="flex items-baseline justify-between gap-6">
+            <p class="text-xs font-bold uppercase tracking-[0.18em] text-alba-accent">
+              Lo que falta
+            </p>
+            <p class="shrink-0 font-spectral text-sm text-white/50" aria-hidden="true">
+              04
+            </p>
+          </div>
 
-          <div class="mb-7 h-[5px] w-14 bg-alba-accent" aria-hidden="true"></div>
+          <div class="mb-7 mt-8 h-[5px] w-14 bg-alba-accent" aria-hidden="true"></div>
 
           <h2
-            id="titulo-necesidad"
+            id="titulo-falta"
             class="font-spectral text-4xl leading-[1.05] tracking-[-0.02em] text-white sm:text-5xl lg:text-7xl"
           >
             Para hacerlo posible
@@ -200,84 +305,298 @@
     </section>
 
     <!-- =========================================================
-         04 — LA CONVOCATORIA
+         05 — COLABORAR
          ========================================================= -->
 
     <section
+      id="colaborar"
       class="bg-alba-surface"
       aria-labelledby="titulo-colaborar"
     >
       <div
-        class="mx-auto max-w-[1500px] px-6 py-24 sm:px-10 md:px-14 md:py-28 lg:px-20 xl:px-24"
+        class="mx-auto max-w-[1500px] px-6 py-24 sm:px-10 md:px-14 md:py-32 lg:px-20 xl:px-24"
       >
 
-        <div class="max-w-[900px]">
-
-          <p class="mb-5 text-xs font-bold uppercase tracking-[0.18em] text-alba-secondary">
+        <div class="flex items-baseline justify-between gap-6">
+          <p class="text-xs font-bold uppercase tracking-[0.18em] text-alba-secondary">
             La convocatoria
           </p>
-
-          <h2
-            id="titulo-colaborar"
-            class="font-spectral text-4xl leading-[1.05] tracking-[-0.02em] text-alba-primary sm:text-5xl lg:text-6xl"
-          >
-            ¿Cómo colaborar?
-          </h2>
-
-          <div class="mb-7 mt-8 h-[5px] w-14 bg-alba-accent" aria-hidden="true"></div>
-
-          <p
-            class="max-w-[26ch] font-spectral text-2xl leading-[1.35] text-alba-primary md:text-4xl md:leading-[1.3] lg:text-[44px]"
-          >
-            Recursos, equipamiento, servicios, conocimientos, aportes económicos o contactos.
+          <p class="shrink-0 font-spectral text-sm text-alba-secondary/70" aria-hidden="true">
+            05
           </p>
+        </div>
 
-          <p
-            class="mt-10 max-w-[20ch] font-spectral text-3xl leading-tight text-alba-primary md:text-4xl lg:text-[40px]"
+        <h2
+          id="titulo-colaborar"
+          class="mt-10 font-spectral text-4xl leading-[1.05] tracking-[-0.02em] text-alba-primary sm:text-5xl lg:text-6xl"
+        >
+          ¿Cómo colaborar?
+        </h2>
+
+        <div class="mb-7 mt-8 h-[5px] w-14 bg-alba-accent" aria-hidden="true"></div>
+
+        <!--
+          Composición tipográfica de gran escala con las formas de
+          colaboración aprobadas (sin cards, sin catálogo).
+        -->
+
+        <ol class="mt-10" aria-label="Formas de colaborar">
+
+          <li class="grid grid-cols-[3rem_1fr] items-baseline gap-4 border-t border-alba-secondary/20 py-6 sm:grid-cols-[5rem_1fr] md:py-7">
+            <span class="font-spectral text-xl text-alba-accent md:text-2xl" aria-hidden="true">01</span>
+            <p class="font-spectral text-3xl leading-tight text-alba-primary md:text-5xl">
+              Recursos
+            </p>
+          </li>
+
+          <li class="grid grid-cols-[3rem_1fr] items-baseline gap-4 border-t border-alba-secondary/20 py-6 sm:grid-cols-[5rem_1fr] md:py-7">
+            <span class="font-spectral text-xl text-alba-accent md:text-2xl" aria-hidden="true">02</span>
+            <p class="font-spectral text-3xl leading-tight text-alba-primary md:text-5xl">
+              Equipamiento
+            </p>
+          </li>
+
+          <li class="grid grid-cols-[3rem_1fr] items-baseline gap-4 border-t border-alba-secondary/20 py-6 sm:grid-cols-[5rem_1fr] md:py-7">
+            <span class="font-spectral text-xl text-alba-accent md:text-2xl" aria-hidden="true">03</span>
+            <p class="font-spectral text-3xl leading-tight text-alba-primary md:text-5xl">
+              Servicios
+            </p>
+          </li>
+
+          <li class="grid grid-cols-[3rem_1fr] items-baseline gap-4 border-t border-alba-secondary/20 py-6 sm:grid-cols-[5rem_1fr] md:py-7">
+            <span class="font-spectral text-xl text-alba-accent md:text-2xl" aria-hidden="true">04</span>
+            <p class="font-spectral text-3xl leading-tight text-alba-primary md:text-5xl">
+              Conocimientos
+            </p>
+          </li>
+
+          <li class="grid grid-cols-[3rem_1fr] items-baseline gap-4 border-t border-alba-secondary/20 py-6 sm:grid-cols-[5rem_1fr] md:py-7">
+            <span class="font-spectral text-xl text-alba-accent md:text-2xl" aria-hidden="true">05</span>
+            <p class="font-spectral text-3xl leading-tight text-alba-primary md:text-5xl">
+              Aportes económicos
+            </p>
+          </li>
+
+          <li class="grid grid-cols-[3rem_1fr] items-baseline gap-4 border-y border-alba-secondary/20 py-6 sm:grid-cols-[5rem_1fr] md:py-7">
+            <span class="font-spectral text-xl text-alba-accent md:text-2xl" aria-hidden="true">06</span>
+            <p class="font-spectral text-3xl leading-tight text-alba-primary md:text-5xl">
+              Contactos
+            </p>
+          </li>
+
+        </ol>
+
+        <p
+          class="mt-12 max-w-[20ch] font-spectral text-3xl leading-tight text-alba-primary md:text-4xl"
+        >
+          Nos gustaría conversar con vos.
+        </p>
+
+        <div class="mt-10">
+          <a
+            href="https://wa.me/549115678910"
+            class="inline-flex items-center justify-center bg-alba-primary px-7 py-4 text-sm font-semibold text-white hover:bg-alba-accent hover:text-alba-primary cta-primary"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Nos gustaría conversar con vos.
-          </p>
-
-          <div class="mt-10">
-            <!-- TODO: reemplazar href="#" por el enlace real de WhatsApp cuando Alba lo defina. -->
-            <a
-              href="#"
-              class="inline-flex items-center justify-center bg-alba-primary px-7 py-4 text-sm font-semibold text-white hover:bg-alba-accent hover:text-alba-primary cta-primary"
-            >
-              Conversar por WhatsApp
-            </a>
-          </div>
-
+            Conversar por WhatsApp
+          </a>
         </div>
 
       </div>
     </section>
 
     <!-- =========================================================
-         05 — FIRMA / SOMOS ALBA
+         06 — CONTACTO (componente compartido con la landing)
+         ========================================================= -->
+
+<!-- Seccion Contacto -->
+
+<section
+  id="contacto"
+  class="bg-alba-primary"
+>
+
+  <div class="mx-auto grid max-w-[1500px] md:grid-cols-[58%_42%]">
+
+
+<!-- Texto -->
+<div class="flex min-h-[560px] min-w-0 items-center px-6 py-24 sm:px-10 md:px-14 lg:px-20 xl:px-24">
+
+  <div class="max-w-[700px]">
+
+    <div class="flex items-baseline justify-between gap-6">
+      <p class="mb-5 text-xs font-bold uppercase tracking-[0.18em] text-alba-accent section-label">
+        Contacto
+      </p>
+      <p class="shrink-0 font-spectral text-sm text-white/50" aria-hidden="true">
+        06
+      </p>
+    </div>
+
+    <h2
+      class="font-spectral text-4xl leading-tight text-white sm:text-5xl lg:text-6xl section-title"
+    >
+      El primer paso es simplemente hablar.
+    </h2>
+
+  </div>
+
+</div>
+
+
+<!-- Datos -->
+<div
+  class="flex min-h-[560px] min-w-0 items-center bg-alba-accent px-6 py-20 sm:px-10 md:px-12 lg:px-16"
+>
+
+  <div class="w-full max-w-[480px]">
+
+    <div class="space-y-8">
+
+      <!-- WhatsApp -->
+
+
+      <a
+        href="https://wa.me/549115678910"
+        class="group flex items-center gap-5 content-link contact-item"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+
+        <img
+          src="assets/contact/whatsapp.svg"
+          alt=""
+          class="h-10 w-10 shrink-0"
+          loading="lazy"
+        />
+
+        <span>
+          <span class="block text-xs font-bold uppercase tracking-[0.14em] text-alba-secondary contact-label">
+            WhatsApp
+          </span>
+
+          <span class="mt-1 block text-lg font-semibold text-alba-primary contact-value">
+            +54 9 11 567 8910
+          </span>
+
+          <span class="mt-1 block text-sm leading-6 text-alba-secondary contact-detail">
+            Horario: lunes a viernes · 9 a 18 h
+          </span>
+        </span>
+
+      </a>
+
+
+      <!-- Email -->
+
+
+      <a
+        href="mailto:hola@fundacionalba.org"
+        class="group flex items-center gap-5 content-link contact-item"
+      >
+
+        <span
+          class="flex h-10 w-10 shrink-0 items-center justify-center text-alba-primary"
+          aria-hidden="true"
+        >
+          <img
+            src="assets/contact/mail.svg"
+            alt=""
+            class="h-7 w-7"
+            loading="lazy"
+          />
+        </span>
+
+        <span class="min-w-0">
+          <span class="block text-xs font-bold uppercase tracking-[0.14em] text-alba-secondary contact-label">
+            Email
+          </span>
+
+          <span class="mt-1 block break-words text-lg font-semibold text-alba-primary contact-value">
+            hola@fundacionalba.org
+          </span>
+        </span>
+
+      </a>
+
+
+      <!-- Sede -->
+      <a
+        href="https://www.google.com/maps/search/?api=1&query=Rosario+465%2C+4%C2%BA+18%2C+CABA"
+        class="group flex items-center gap-5 content-link contact-item"
+        aria-label="Sede Fundación Alba"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+
+        <span
+          class="flex h-10 w-10 shrink-0 items-center justify-center text-alba-primary"
+          aria-hidden="true"
+        >
+          <img
+            src="assets/contact/place.svg"
+            alt=""
+            class="h-[30px] w-[30px]"
+            loading="lazy"
+          />
+        </span>
+
+        <span>
+          <span class="block text-xs font-bold uppercase tracking-[0.14em] text-alba-secondary contact-label">
+            Sede
+          </span>
+
+          <span class="mt-1 block text-lg font-semibold text-alba-primary contact-value">
+            Rosario 465, 4.º 18, CABA
+          </span>
+        </span>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+  </div>
+
+</section>
+
+<!-- Fin Seccion Contacto -->
+
+    <!-- =========================================================
+         07 — FIRMA / SOMOS ALBA
          ========================================================= -->
 
     <section
       id="somos-alba"
-      class="bg-alba-primary"
+      class="bg-alba-surface"
       aria-labelledby="titulo-somos"
     >
       <div
-        class="mx-auto max-w-[1500px] px-6 py-24 sm:px-10 md:px-14 md:py-28 lg:px-20 xl:px-24"
+        class="mx-auto max-w-[1500px] px-6 py-24 sm:px-10 md:px-14 md:py-32 lg:px-20 xl:px-24"
       >
 
-        <p class="mb-5 text-xs font-bold uppercase tracking-[0.18em] text-alba-accent">
-          Firma
-        </p>
+        <div class="flex items-baseline justify-between gap-6">
+          <p class="text-xs font-bold uppercase tracking-[0.18em] text-alba-secondary">
+            Firma
+          </p>
+          <p class="shrink-0 font-spectral text-sm text-alba-secondary/70" aria-hidden="true">
+            07
+          </p>
+        </div>
 
         <h2
           id="titulo-somos"
-          class="font-spectral text-4xl leading-[1.05] tracking-[-0.02em] text-white sm:text-5xl lg:text-6xl"
+          class="mt-10 font-spectral text-4xl leading-[1.05] tracking-[-0.02em] text-alba-primary sm:text-5xl lg:text-6xl"
         >
           Somos Alba
         </h2>
 
-        <div class="mt-8 h-px w-20 bg-white/25" aria-hidden="true"></div>
+        <div class="mt-8 h-px w-20 bg-alba-secondary/35" aria-hidden="true"></div>
 
         <!--
           TODO: completar apellidos, funciones, WhatsApp y emails reales.
@@ -287,96 +606,91 @@
 
         <ul class="mt-10 md:grid md:grid-cols-2 md:gap-x-16">
 
-          <li class="border-t border-white/15 py-6">
-            <p class="font-spectral text-2xl leading-tight text-white md:text-[26px]">
+          <li class="border-t border-alba-secondary/20 py-6">
+            <p class="font-spectral text-2xl leading-tight text-alba-primary md:text-[26px]">
               Pablo Gianni
             </p>
-            <p class="mt-2 text-xs font-bold uppercase tracking-[0.18em] text-white/70">
+            <p class="mt-2 text-xs font-bold uppercase tracking-[0.18em] text-alba-secondary">
               Presidente
             </p>
-            <p class="mt-3 text-sm leading-6 text-white/70">
+            <p class="mt-3 text-sm leading-6 text-alba-secondary/80">
               WhatsApp · email
             </p>
           </li>
 
-          <li class="border-t border-white/15 py-6">
-            <p class="font-spectral text-2xl leading-tight text-white md:text-[26px]">
+          <li class="border-t border-alba-secondary/20 py-6">
+            <p class="font-spectral text-2xl leading-tight text-alba-primary md:text-[26px]">
               Federico Miranda
             </p>
-            <p class="mt-2 text-xs font-bold uppercase tracking-[0.18em] text-white/70">
+            <p class="mt-2 text-xs font-bold uppercase tracking-[0.18em] text-alba-secondary">
               Director del Área de Calidad
             </p>
-            <p class="mt-3 text-sm leading-6 text-white/70">
+            <p class="mt-3 text-sm leading-6 text-alba-secondary/80">
               WhatsApp · email
             </p>
           </li>
 
-          <li class="border-t border-white/15 py-6">
-            <p class="font-spectral text-2xl leading-tight text-white md:text-[26px]">
+          <li class="border-t border-alba-secondary/20 py-6">
+            <p class="font-spectral text-2xl leading-tight text-alba-primary md:text-[26px]">
               Karina <!-- TODO: completar apellido -->
             </p>
-            <p class="mt-2 text-xs font-bold uppercase tracking-[0.18em] text-white/70">
+            <p class="mt-2 text-xs font-bold uppercase tracking-[0.18em] text-alba-secondary">
               [Función pendiente]
             </p>
-            <p class="mt-3 text-sm leading-6 text-white/70">
+            <p class="mt-3 text-sm leading-6 text-alba-secondary/80">
               WhatsApp · email
             </p>
           </li>
 
-          <li class="border-t border-white/15 py-6">
-            <p class="font-spectral text-2xl leading-tight text-white md:text-[26px]">
+          <li class="border-t border-alba-secondary/20 py-6">
+            <p class="font-spectral text-2xl leading-tight text-alba-primary md:text-[26px]">
               Gloria <!-- TODO: completar apellido -->
             </p>
-            <p class="mt-2 text-xs font-bold uppercase tracking-[0.18em] text-white/70">
+            <p class="mt-2 text-xs font-bold uppercase tracking-[0.18em] text-alba-secondary">
               [Función pendiente]
             </p>
-            <p class="mt-3 text-sm leading-6 text-white/70">
+            <p class="mt-3 text-sm leading-6 text-alba-secondary/80">
               WhatsApp · email
             </p>
           </li>
 
-          <li class="border-t border-white/15 py-6">
-            <p class="font-spectral text-2xl leading-tight text-white md:text-[26px]">
+          <li class="border-t border-alba-secondary/20 py-6">
+            <p class="font-spectral text-2xl leading-tight text-alba-primary md:text-[26px]">
               Sergio <!-- TODO: completar apellido -->
             </p>
-            <p class="mt-2 text-xs font-bold uppercase tracking-[0.18em] text-white/70">
+            <p class="mt-2 text-xs font-bold uppercase tracking-[0.18em] text-alba-secondary">
               [Función pendiente]
             </p>
-            <p class="mt-3 text-sm leading-6 text-white/70">
+            <p class="mt-3 text-sm leading-6 text-alba-secondary/80">
               WhatsApp · email
             </p>
           </li>
 
-          <li class="border-t border-white/15 py-6">
-            <p class="font-spectral text-2xl leading-tight text-white md:text-[26px]">
+          <li class="border-t border-alba-secondary/20 py-6">
+            <p class="font-spectral text-2xl leading-tight text-alba-primary md:text-[26px]">
               Rodo <!-- TODO: completar apellido -->
             </p>
-            <p class="mt-2 text-xs font-bold uppercase tracking-[0.18em] text-white/70">
+            <p class="mt-2 text-xs font-bold uppercase tracking-[0.18em] text-alba-secondary">
               [Función pendiente]
             </p>
-            <p class="mt-3 text-sm leading-6 text-white/70">
+            <p class="mt-3 text-sm leading-6 text-alba-secondary/80">
               WhatsApp · email
             </p>
           </li>
 
-          <li class="border-y border-white/15 py-6">
-            <p class="font-spectral text-2xl leading-tight text-white md:text-[26px]">
+          <li class="border-y border-alba-secondary/20 py-6">
+            <p class="font-spectral text-2xl leading-tight text-alba-primary md:text-[26px]">
               Jorge Pereyra
             </p>
-            <p class="mt-2 text-xs font-bold uppercase tracking-[0.18em] text-white/70">
+            <p class="mt-2 text-xs font-bold uppercase tracking-[0.18em] text-alba-secondary">
               Identidad y diseño
             </p>
-            <p class="mt-3 text-sm leading-6 text-white/70">
+            <p class="mt-3 text-sm leading-6 text-alba-secondary/80">
               WhatsApp · email
             </p>
           </li>
 
         </ul>
-
-        <!-- TODO: contacto institucional pendiente (WhatsApp, email, dirección). -->
-        <p class="mt-10 text-sm leading-6 text-white/70">
-          [Contacto pendiente]
-        </p>
 
       </div>
     </section>
@@ -384,24 +698,124 @@
   </main>
 
   <!-- =========================================================
-       PIE MÍNIMO
+       FOOTER (componente compartido con la landing)
        ========================================================= -->
 
-  <footer class="bg-alba-surface">
+  <footer
+    class="bg-alba-surface"
+  >
     <div
-      class="mx-auto flex max-w-[1500px] flex-col gap-4 px-6 py-10 text-xs text-alba-secondary sm:flex-row sm:items-center sm:justify-between sm:px-10 md:px-14 lg:px-20 xl:px-24"
+      class="mx-auto max-w-[1500px] px-6 py-14 sm:px-10 md:px-14 lg:px-20 xl:px-24"
     >
 
-      <p>
-        © Fundación Alba
-      </p>
 
-      <p>
-        Convocatoria a colaborar
+  <div class="grid gap-y-10 border-b border-alba-secondary/20 pb-12 md:grid-cols-[58%_42%] md:gap-x-0">
+
+    <!-- Identidad -->
+    <div>
+
+      <div class="flex items-center">
+
+        <img
+          src="assets/brand/Alba.isologotipo.svg"
+          alt="Fundación Alba"
+          class="h-28 w-auto"
+        />
+
+      </div>
+
+      <p class="mt-5 max-w-[430px] text-sm leading-6 text-alba-secondary footer-tagline">
+        Un espacio para construir<br>y sostener tu proceso.
       </p>
 
     </div>
+
+
+    <!-- Redes -->
+    <div class="md:pl-[57px] lg:pl-[77px] xl:pl-[79px]">
+      <p>
+        Seguinos
+      </p>
+
+      <ul class="mt-4 flex flex-col items-start gap-3">
+        <li>
+          <a href="#" class="inline-flex items-center gap-2">
+            <img
+              src="assets/social/instagram.svg"
+              alt=""
+              class="h-4 w-4"
+              loading="lazy"
+            />
+            Instagram
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="inline-flex items-center gap-2">
+            <img
+              src="assets/social/facebook.svg"
+              alt=""
+              class="h-4 w-4"
+              loading="lazy"
+            />
+            Facebook
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="inline-flex items-center gap-2">
+            <img
+              src="assets/social/youtube.svg"
+              alt=""
+              class="h-4 w-4"
+              loading="lazy"
+            />
+            YouTube
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="inline-flex items-center gap-2">
+            <img
+              src="assets/social/tiktok.svg"
+              alt=""
+              class="h-4 w-4"
+              loading="lazy"
+            />
+            TikTok
+          </a>
+        </li>
+      </ul>
+    </div>
+
+
+  </div>
+
+
+  <div class="flex flex-col gap-4 pt-7 text-xs text-alba-secondary sm:flex-row sm:items-center sm:justify-between">
+
+    <p>
+      © Fundación Alba
+    </p>
+
+    <!--
+      DATOS INSTITUCIONALES PENDIENTES
+
+      Evaluar posteriormente:
+      - referencia al Sistema de Gestión basado en ISO 9001:2015;
+      - redes sociales;
+      - año/copyright definitivo;
+      - otros datos institucionales.
+    -->
+
+  </div>
+
+</div>
+
+
   </footer>
+
+  <script src="assets/js/nav-active.js"></script>
 
 </body>
 </html>
