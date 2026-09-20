@@ -15,6 +15,14 @@
   src: url('../fonts/spectral-600-latin.woff2') format('woff2');
 }
 
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('../fonts/spectral-800-latin.woff2') format('woff2');
+}
+
 html {
   scroll-behavior: smooth;
 }
