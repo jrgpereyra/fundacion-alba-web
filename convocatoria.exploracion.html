@@ -10,460 +10,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&family=Spectral:ital,wght@0,600;0,700;0,800;1,600;1,700;1,800&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --green: #24473A;
-      --paper: #FFFFFC;
-      --ocre: #E3A03A;
-      --ink: #24473A;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      background: var(--paper);
-      color: var(--ink);
-      font-family: "Open Sans", sans-serif;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-    }
-
-    a {
-      color: inherit;
-    }
-
-    /* --------------------------------------------------
-       IDENTIDAD TIPOGRÁFICA
-    -------------------------------------------------- */
-
-    .alba-name {
-      font-family: "Spectral", serif;
-      font-weight: 700;
-      letter-spacing: -0.025em;
-    }
-
-    /* --------------------------------------------------
-       HEADER
-    -------------------------------------------------- */
-
-    header {
-      position: relative;
-      z-index: 10;
-      padding: 28px 5vw;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .header-brand {
-      font-size: 0.92rem;
-    }
-
-    .header-label {
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    /* --------------------------------------------------
-       HERO
-    -------------------------------------------------- */
-
-    .hero {
-      min-height: calc(100vh - 90px);
-      padding: 5vh 5vw 9vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      overflow: hidden;
-    }
-
-    .hero-title {
-      margin: 0;
-      max-width: 1250px;
-      font-family: "Spectral", serif;
-      font-size: clamp(4.5rem, 10.8vw, 11rem);
-      font-weight: 800;
-      line-height: 0.82;
-      letter-spacing: -0.06em;
-    }
-
-    .hero-title .line {
-      display: block;
-    }
-
-    .hero-title .italic {
-      font-style: italic;
-      font-weight: 800;
-    }
-
-    .hero-bottom {
-      margin-top: 9vh;
-      max-width: 1100px;
-    }
-
-    .hero-bottom p {
-      margin: 0;
-      max-width: 1050px;
-      font-size: clamp(1.5rem, 2.5vw, 2.5rem);
-      line-height: 1.08;
-      font-weight: 600;
-      letter-spacing: -0.035em;
-    }
-
-    .hero-bottom p + p {
-      margin-top: 1.5rem;
-    }
-
-    /* --------------------------------------------------
-       LUGAR
-    -------------------------------------------------- */
-
-    .place {
-      padding: 12vw 5vw 13vw;
-    }
-
-    .place-heading {
-      max-width: 1150px;
-    }
-
-    .place-heading h2 {
-      margin: 0;
-      font-family: "Spectral", serif;
-      font-size: clamp(3.8rem, 7.5vw, 8rem);
-      font-weight: 800;
-      line-height: 0.82;
-      letter-spacing: -0.055em;
-    }
-
-    .place-copy {
-      margin: 10vw 0 0;
-      max-width: 1100px;
-      font-family: "Spectral", serif;
-      font-size: clamp(1.5rem, 2.4vw, 2.3rem);
-      line-height: 1.25;
-      font-weight: 600;
-    }
-
-    /* --------------------------------------------------
-       NECESIDAD
-    -------------------------------------------------- */
-
-    .need {
-      background: var(--green);
-      color: var(--paper);
-      min-height: 72vh;
-      padding: 9vw 5vw;
-      display: flex;
-      align-items: center;
-      overflow: hidden;
-    }
-
-    .need-inner {
-      max-width: 1200px;
-    }
-
-    .need h2 {
-      margin: 0;
-      max-width: 1100px;
-      font-family: "Spectral", serif;
-      font-size: clamp(4rem, 9vw, 9rem);
-      font-weight: 800;
-      line-height: 0.8;
-      letter-spacing: -0.055em;
-    }
-
-    .need p {
-      margin: 5vw 0 0;
-      max-width: 1000px;
-      font-family: "Open Sans", sans-serif;
-      font-size: clamp(1.8rem, 3.5vw, 3.5rem);
-      line-height: 1;
-      font-weight: 600;
-      letter-spacing: -0.04em;
-    }
-
-    /* --------------------------------------------------
-       CONVOCATORIA
-    -------------------------------------------------- */
-
-    .collaborate {
-      background: var(--ocre);
-      padding: 12vw 5vw 10vw;
-    }
-
-    .collaborate h2 {
-      margin: 0;
-      max-width: 1100px;
-      font-family: "Spectral", serif;
-      font-size: clamp(4rem, 9vw, 9rem);
-      font-weight: 800;
-      line-height: 0.8;
-      letter-spacing: -0.055em;
-    }
-
-    .collaborate-body {
-      margin-top: 8vw;
-      max-width: 1100px;
-    }
-
-    .collaborate-body p {
-      margin: 0;
-    }
-
-    .collaborate-body .main-copy {
-      max-width: 1000px;
-      font-family: "Open Sans", sans-serif;
-      font-size: clamp(1.8rem, 3.5vw, 3.5rem);
-      line-height: 1;
-      font-weight: 600;
-      letter-spacing: -0.04em;
-    }
-
-    .collaborate-body .secondary-copy {
-      margin-top: 6vw;
-      font-family: "Spectral", serif;
-      font-size: clamp(2.7rem, 5vw, 5rem);
-      line-height: 0.92;
-      font-weight: 800;
-      letter-spacing: -0.05em;
-    }
-
-    .contact-links {
-      margin-top: 5vw;
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-
-    .contact-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.8rem;
-      width: fit-content;
-      text-decoration: none;
-      font-family: "Open Sans", sans-serif;
-      font-size: clamp(1.1rem, 1.5vw, 1.4rem);
-      font-weight: 700;
-    }
-
-    .contact-link img {
-      width: 1em;
-      height: 1em;
-      flex: 0 0 1em;
-    }
-
-    .contact-link .contact-data {
-      text-decoration: underline;
-      text-decoration-thickness: 1px;
-      text-underline-offset: 0.15em;
-    }
-
-    /* --------------------------------------------------
-       FIRMA
-    -------------------------------------------------- */
-
-    .signature {
-      padding: 7vw 5vw 8vw;
-      border-top: 1px solid rgba(36, 71, 58, 0.25);
-    }
-
-    .signature-title {
-      margin: 0 0 5vw;
-      font-family: "Open Sans", sans-serif;
-      font-size: clamp(3rem, 6vw, 6rem);
-      font-weight: 800;
-      line-height: 0.9;
-      letter-spacing: -0.055em;
-    }
-
-    .signature-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 4vw 7vw;
-    }
-
-    .person {
-      padding-top: 1.2rem;
-      border-top: 1px solid rgba(36, 71, 58, 0.4);
-    }
-
-    .person-name {
-      font-size: 1.2rem;
-      font-weight: 700;
-    }
-
-    .person-role {
-      margin-top: 0.3rem;
-      font-size: 0.95rem;
-      line-height: 1.3;
-    }
-
-    /* --------------------------------------------------
-       CIERRE
-    -------------------------------------------------- */
-
-    .closing {
-      background: var(--green);
-      color: var(--paper);
-      min-height: 55vh;
-      padding: 8vw 5vw 5vw;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      align-items: flex-start;
-    }
-
-    .closing-logo {
-      width: min(420px, 55vw);
-      margin-bottom: 3rem;
-    }
-
-    .closing-date {
-      margin: 0;
-      font-size: clamp(0.9rem, 1.2vw, 1.1rem);
-      font-weight: 600;
-      letter-spacing: 0.04em;
-    }
-
-    /* --------------------------------------------------
-       MOBILE
-    -------------------------------------------------- */
-
-    @media (max-width: 760px) {
-
-      header {
-        padding: 22px 6vw;
-      }
-
-      .header-label {
-        display: none;
-      }
-
-      .hero {
-        min-height: auto;
-        padding: 7vh 6vw 12vh;
-      }
-
-      .hero-title {
-        font-size: clamp(4rem, 17vw, 7rem);
-        line-height: 0.84;
-      }
-
-      .hero-bottom {
-        margin-top: 8vh;
-      }
-
-      .hero-bottom p {
-        font-size: clamp(1.35rem, 6.5vw, 2rem);
-      }
-
-      .hero-bottom p + p {
-        margin-top: 1.3rem;
-      }
-
-      .place {
-        padding: 16vw 6vw;
-      }
-
-      .place-heading h2 {
-        font-size: clamp(3.5rem, 15vw, 6rem);
-      }
-
-      .place-copy {
-        margin-top: 14vw;
-        font-size: clamp(1.3rem, 6vw, 2rem);
-      }
-
-      .need {
-        min-height: 65vh;
-        padding: 14vw 6vw;
-      }
-
-      .need h2 {
-        font-size: clamp(4rem, 16vw, 7rem);
-      }
-
-      .need p {
-        margin-top: 12vw;
-        font-size: clamp(1.6rem, 7vw, 2.5rem);
-      }
-
-      .collaborate {
-        padding: 16vw 6vw 14vw;
-      }
-
-      .collaborate h2 {
-        font-size: clamp(4rem, 16vw, 7rem);
-      }
-
-      .collaborate-body {
-        margin-top: 14vw;
-      }
-
-      .collaborate-body .main-copy {
-        font-size: clamp(1.6rem, 7vw, 2.5rem);
-      }
-
-      .collaborate-body .secondary-copy {
-        margin-top: 12vw;
-        font-size: clamp(2.8rem, 13vw, 5rem);
-      }
-
-      .contact-links {
-        margin-top: 10vw;
-      }
-
-      .contact-link {
-        font-size: clamp(1.1rem, 5vw, 1.4rem);
-      }
-
-      .signature {
-        padding: 12vw 6vw;
-      }
-
-      .signature-title {
-        margin-bottom: 10vw;
-      }
-
-      .signature-grid {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-      }
-
-      .closing {
-        min-height: 45vh;
-        padding: 12vw 6vw 8vw;
-      }
-
-      .closing-logo {
-        width: min(340px, 72vw);
-        margin-bottom: 2rem;
-      }
-    }
-  </style>
+  <!-- Tailwind (CSS estático local de producción) -->
+  <link rel="stylesheet" href="assets/css/tailwind.css">
+
+  <!-- Tipografías autohospedadas + recursos compartidos -->
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body>
+<body class="bg-[#FFFFFC] text-alba-primary antialiased">
 
-  <header>
-    <div class="header-brand">
-      <span class="alba-name">FUNDACIÓN ALBA</span>
+  <header class="relative z-10 flex items-center justify-between px-[5vw] py-[28px] max-[760px]:px-[6vw] max-[760px]:py-[22px]">
+    <div class="text-[0.92rem]">
+      <span class="font-spectral font-bold tracking-[-0.025em]">FUNDACIÓN ALBA</span>
     </div>
 
-    <div class="header-label">
+    <div class="text-[0.72rem] font-semibold uppercase tracking-[0.08em] max-[760px]:hidden">
       Convocatoria a colaborar
     </div>
   </header>
@@ -472,24 +33,24 @@
 
     <!-- APERTURA -->
 
-    <section class="hero">
+    <section class="flex min-h-[calc(100vh-90px)] flex-col justify-center overflow-hidden px-[5vw] pb-[9vh] pt-[5vh] max-[760px]:min-h-[auto] max-[760px]:px-[6vw] max-[760px]:pb-[12vh] max-[760px]:pt-[7vh]">
 
-      <h1 class="hero-title">
-        <span class="line">Estamos</span>
-        <span class="line italic">construyendo</span>
-        <span class="line italic">un nuevo</span>
-        <span class="line italic">espacio</span>
+      <h1 class="m-0 max-w-[1250px] font-spectral text-[clamp(4.5rem,10.8vw,11rem)] font-extrabold leading-[0.82] tracking-[-0.06em] max-[760px]:text-[clamp(4rem,17vw,7rem)] max-[760px]:leading-[0.84]">
+        <span class="block">Estamos</span>
+        <span class="block font-extrabold italic">construyendo</span>
+        <span class="block font-extrabold italic">un nuevo</span>
+        <span class="block font-extrabold italic">espacio</span>
       </h1>
 
-      <div class="hero-bottom">
+      <div class="mt-[9vh] max-w-[1100px] max-[760px]:mt-[8vh]">
 
-        <p>
-          <span class="alba-name">FUNDACIÓN ALBA</span> acompaña a personas con consumos problemáticos
-          y a sus redes de contención.
+        <p class="m-0 max-w-[1050px] text-[clamp(1.5rem,2.5vw,2.5rem)] font-semibold leading-[1.08] tracking-[-0.035em] max-[760px]:text-[clamp(1.35rem,6.5vw,2rem)]">
+          La nueva sede nos permitirá ampliar las posibilidades de encuentro.
         </p>
 
-        <p>
-          La sede nos permitirá ampliar las posibilidades de encuentro.
+        <p class="m-0 mt-6 max-w-[1050px] text-[clamp(1.5rem,2.5vw,2.5rem)] font-semibold leading-[1.08] tracking-[-0.035em] max-[760px]:mt-[1.3rem] max-[760px]:text-[clamp(1.35rem,6.5vw,2rem)]">
+          <span class="font-spectral font-bold tracking-[-0.025em]">FUNDACIÓN ALBA</span> acompaña a personas con consumos problemáticos
+          y a sus redes de contención.
         </p>
 
       </div>
@@ -499,13 +60,13 @@
 
     <!-- EL LUGAR -->
 
-    <section class="place">
+    <section class="px-[5vw] pb-[13vw] pt-[12vw] max-[760px]:px-[6vw] max-[760px]:py-[16vw]">
 
-      <div class="place-heading">
-        <h2>Un lugar para encontrarse y compartir</h2>
+      <div class="max-w-[1150px]">
+        <h2 class="m-0 font-spectral text-[clamp(3.8rem,7.5vw,8rem)] font-extrabold leading-[0.82] tracking-[-0.055em] max-[760px]:text-[clamp(3.5rem,15vw,6rem)]">Un lugar para encontrarse y compartir</h2>
       </div>
 
-      <p class="place-copy">
+      <p class="mb-0 ml-0 mr-0 mt-[10vw] max-w-[1100px] font-spectral text-[clamp(1.5rem,2.4vw,2.3rem)] font-semibold leading-[1.25] max-[760px]:mt-[14vw] max-[760px]:text-[clamp(1.3rem,6vw,2rem)]">
         Consultorios para terapias individuales,<br>
         ámbitos para el trabajo grupal,<br>
         actividades abiertas tanto a profesionales como a la comunidad,<br>
@@ -517,13 +78,13 @@
 
     <!-- NECESIDAD -->
 
-    <section class="need">
+    <section class="flex min-h-[72vh] items-center overflow-hidden bg-alba-primary px-[5vw] py-[9vw] text-[#FFFFFC] max-[760px]:min-h-[65vh] max-[760px]:px-[6vw] max-[760px]:py-[14vw]">
 
-      <div class="need-inner">
+      <div class="max-w-[1200px]">
 
-        <h2>Para hacerlo posible</h2>
+        <h2 class="m-0 max-w-[1100px] font-spectral text-[clamp(4rem,9vw,9rem)] font-extrabold leading-[0.8] tracking-[-0.055em] max-[760px]:text-[clamp(4rem,16vw,7rem)]">Para hacerlo posible</h2>
 
-        <p>
+        <p class="mb-0 ml-0 mr-0 mt-[5vw] max-w-[1000px] text-[clamp(1.8rem,3.5vw,3.5rem)] font-semibold leading-none tracking-[-0.04em] max-[760px]:mt-[12vw] max-[760px]:text-[clamp(1.6rem,7vw,2.5rem)]">
           Necesitamos acondicionar el espacio.
         </p>
 
@@ -534,49 +95,51 @@
 
     <!-- QUÉ NECESITAMOS -->
 
-    <section class="collaborate">
+    <section class="bg-alba-accent px-[5vw] pb-[10vw] pt-[12vw] max-[760px]:px-[6vw] max-[760px]:pb-[14vw] max-[760px]:pt-[16vw]">
 
-      <h2>¿Qué necesitamos?</h2>
+      <h2 class="m-0 max-w-[1100px] font-spectral text-[clamp(4rem,9vw,9rem)] font-extrabold leading-[0.8] tracking-[-0.055em] max-[760px]:text-[clamp(4rem,16vw,7rem)]">¿Qué necesitamos?</h2>
 
-      <div class="collaborate-body">
+      <div class="mt-[8vw] max-w-[1100px] max-[760px]:mt-[14vw]">
 
-        <p class="main-copy">
+        <p class="m-0 max-w-[1000px] text-[clamp(1.8rem,3.5vw,3.5rem)] font-semibold leading-none tracking-[-0.04em] max-[760px]:text-[clamp(1.6rem,7vw,2.5rem)]">
           Recursos, equipamiento, servicios, conocimientos,
           aportes económicos o contactos.
         </p>
 
-        <p class="secondary-copy">
+        <p class="m-0 mt-[6vw] font-spectral text-[clamp(2.7rem,5vw,5rem)] font-extrabold leading-[0.92] tracking-[-0.05em] max-[760px]:mt-[12vw] max-[760px]:text-[clamp(2.8rem,13vw,5rem)]">
           Si podés ayudarnos,<br> nos gustaría conversar con vos.
         </p>
 
-        <div class="contact-links">
+        <div class="mt-[5vw] flex flex-col gap-6 max-[760px]:mt-[10vw]">
 
           <!-- Reemplazar href y texto por el WhatsApp real -->
 
-          <a class="contact-link" href="tel:+54911XXXXXXXX">
+          <a class="inline-flex w-fit items-center gap-[0.8rem] text-[clamp(1.1rem,1.5vw,1.4rem)] font-bold no-underline max-[760px]:text-[clamp(1.1rem,5vw,1.4rem)]" href="tel:+54911XXXXXXXX">
             <img
               src="assets/contact/whatsapp.svg"
               alt=""
               aria-hidden="true"
+              class="h-5 w-5 shrink-0"
             >
-            <span class="contact-data">+54 9 11 XXX XXXX</span>
+            <span class="underline decoration-1 underline-offset-[0.15em]">+54 9 11 XXX XXXX</span>
           </a>
 
           <!-- Reemplazar href y texto por el email real -->
 
-          <a class="contact-link" href="mailto:correo@fundacionalba.org">
+          <a class="inline-flex w-fit items-center gap-[0.8rem] text-[clamp(1.1rem,1.5vw,1.4rem)] font-bold no-underline max-[760px]:text-[clamp(1.1rem,5vw,1.4rem)]" href="mailto:correo@fundacionalba.org">
             <img
               src="assets/contact/mail.svg"
               alt=""
               aria-hidden="true"
+              class="h-5 w-5 shrink-0"
             >
-            <span class="contact-data">correo@fundacionalba.org</span>
+            <span class="underline decoration-1 underline-offset-[0.15em]">correo@fundacionalba.org</span>
           </a>
 
           <!-- La sede completa funciona como enlace a Google Maps -->
 
           <a
-            class="contact-link"
+            class="inline-flex w-fit items-center gap-[0.8rem] text-[clamp(1.1rem,1.5vw,1.4rem)] font-bold no-underline max-[760px]:text-[clamp(1.1rem,5vw,1.4rem)]"
             href="https://www.google.com/maps/search/?api=1&query=Rosario+465%2C+4%C2%BA+18%2C+CABA"
             target="_blank"
             rel="noopener noreferrer"
@@ -585,8 +148,9 @@
               src="assets/contact/place.svg"
               alt=""
               aria-hidden="true"
+              class="h-5 w-5 shrink-0"
             >
-            <span class="contact-data">
+            <span class="underline decoration-1 underline-offset-[0.15em]">
               Sede · Rosario 465, 4.º 18, CABA
             </span>
           </a>
@@ -600,45 +164,45 @@
 
     <!-- FIRMA -->
 
-    <section class="signature">
+    <section class="border-t border-alba-primary/25 px-[5vw] pb-[8vw] pt-[7vw] max-[760px]:px-[6vw] max-[760px]:py-[12vw]">
 
-      <h2 class="signature-title">SOMOS ALBA</h2>
+      <h2 class="m-0 mb-[5vw] text-[clamp(3rem,6vw,6rem)] font-extrabold leading-[0.9] tracking-[-0.055em] max-[760px]:mb-[10vw]">SOMOS ALBA</h2>
 
-      <div class="signature-grid">
+      <div class="grid grid-cols-2 gap-x-[7vw] gap-y-[4vw] max-[760px]:grid-cols-1 max-[760px]:gap-12">
 
-        <div class="person">
-          <div class="person-name">Pablo Gianni</div>
-          <div class="person-role">Presidente</div>
+        <div class="border-t border-alba-primary/40 pt-[1.2rem]">
+          <div class="text-[1.2rem] font-bold">Pablo Gianni</div>
+          <div class="mt-[0.3rem] text-[0.95rem] leading-[1.3]">Presidente</div>
         </div>
 
-        <div class="person">
-          <div class="person-name">Federico Miranda</div>
-          <div class="person-role">Director del Área de Calidad</div>
+        <div class="border-t border-alba-primary/40 pt-[1.2rem]">
+          <div class="text-[1.2rem] font-bold">Federico Miranda</div>
+          <div class="mt-[0.3rem] text-[0.95rem] leading-[1.3]">Director del Área de Calidad</div>
         </div>
 
-        <div class="person">
-          <div class="person-name">Karina</div>
-          <div class="person-role">[Función pendiente]</div>
+        <div class="border-t border-alba-primary/40 pt-[1.2rem]">
+          <div class="text-[1.2rem] font-bold">Karina</div>
+          <div class="mt-[0.3rem] text-[0.95rem] leading-[1.3]">[Función pendiente]</div>
         </div>
 
-        <div class="person">
-          <div class="person-name">Gloria</div>
-          <div class="person-role">[Función pendiente]</div>
+        <div class="border-t border-alba-primary/40 pt-[1.2rem]">
+          <div class="text-[1.2rem] font-bold">Gloria</div>
+          <div class="mt-[0.3rem] text-[0.95rem] leading-[1.3]">[Función pendiente]</div>
         </div>
 
-        <div class="person">
-          <div class="person-name">Sergio</div>
-          <div class="person-role">[Función pendiente]</div>
+        <div class="border-t border-alba-primary/40 pt-[1.2rem]">
+          <div class="text-[1.2rem] font-bold">Sergio</div>
+          <div class="mt-[0.3rem] text-[0.95rem] leading-[1.3]">[Función pendiente]</div>
         </div>
 
-        <div class="person">
-          <div class="person-name">Rodo</div>
-          <div class="person-role">[Función pendiente]</div>
+        <div class="border-t border-alba-primary/40 pt-[1.2rem]">
+          <div class="text-[1.2rem] font-bold">Rodo</div>
+          <div class="mt-[0.3rem] text-[0.95rem] leading-[1.3]">[Función pendiente]</div>
         </div>
 
-        <div class="person">
-          <div class="person-name">Jorge Pereyra</div>
-          <div class="person-role">Identidad y diseño</div>
+        <div class="border-t border-alba-primary/40 pt-[1.2rem]">
+          <div class="text-[1.2rem] font-bold">Jorge Pereyra</div>
+          <div class="mt-[0.3rem] text-[0.95rem] leading-[1.3]">Identidad y diseño</div>
         </div>
 
       </div>
@@ -648,15 +212,15 @@
 
     <!-- CIERRE -->
 
-    <section class="closing">
+    <section class="flex min-h-[55vh] flex-col items-start justify-end bg-alba-primary px-[5vw] pb-[5vw] pt-[8vw] text-[#FFFFFC] max-[760px]:min-h-[45vh] max-[760px]:px-[6vw] max-[760px]:pb-[8vw] max-[760px]:pt-[12vw]">
 
       <img
-        class="closing-logo"
+        class="mb-12 w-[min(420px,55vw)] max-[760px]:mb-8 max-[760px]:w-[min(340px,72vw)]"
         src="assets/brand/Alba.isologotipo.blanco.svg"
         alt="FUNDACIÓN ALBA"
       >
 
-      <p class="closing-date">
+      <p class="m-0 text-[clamp(0.9rem,1.2vw,1.1rem)] font-semibold tracking-[0.04em]">
         Buenos Aires · <span id="current-date"></span>
       </p>
 
@@ -665,27 +229,7 @@
   </main>
 
 
-  <script>
-    const months = [
-      "Enero",
-      "Febrero",
-      "Marzo",
-      "Abril",
-      "Mayo",
-      "Junio",
-      "Julio",
-      "Agosto",
-      "Septiembre",
-      "Octubre",
-      "Noviembre",
-      "Diciembre"
-    ];
-
-    const now = new Date();
-
-    document.getElementById("current-date").textContent =
-      `${months[now.getMonth()]} de ${now.getFullYear()}`;
-  </script>
+  <script src="assets/js/current-date.js"></script>
 
 </body>
 </html>
