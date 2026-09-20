@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -98,88 +99,28 @@
       font-family: "Spectral", serif;
       font-size: clamp(4.5rem, 10.8vw, 11rem);
       font-weight: 800;
-      line-height: 0.69;
+      line-height: 0.64;
       letter-spacing: -0.06em;
     }
 
     .hero-title .line {
       display: block;
-    }
-
-    .hero-title .italic {
-      font-style: italic;
-      font-weight: 700;
+      font-style: normal;
+      font-weight: 800;
     }
 
     .hero-bottom {
-      margin-top: 9vh;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5vw;
-      align-items: end;
+      margin-top: 10vh;
+      max-width: 1450px;
     }
 
     .hero-bottom p {
       margin: 0;
-      max-width: none;
-      font-size: clamp(1.5rem, 2.5vw, 2.5rem);
-      line-height: 1.08;
-      font-weight: 600;
-      letter-spacing: -0.035em;
-    }
-
-    .hero-note {
-      justify-self: end;
-      max-width: 620px;
-      font-family: "Open Sans", sans-serif !important;
-      font-size: clamp(1.5rem, 2.5vw, 2.5rem) !important;
-      line-height: 1.08 !important;
-      font-weight: 600 !important;
-      font-style: normal !important;
-      text-align: right;
-    }
-
-    /* --------------------------------------------------
-       LOGO / PRESENTACIÓN
-    -------------------------------------------------- */
-
-    .presentation {
-      background: var(--ocre);
-      min-height: 78vh;
-      padding: 7vw 5vw;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 6vw;
-      align-items: center;
-      overflow: hidden;
-    }
-
-    .presentation-logo {
-      width: min(44vw, 650px);
-      max-width: none;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .presentation-copy {
-      max-width: 900px;
-    }
-
-    .presentation-copy p {
-      margin: 0;
       font-family: "Open Sans", sans-serif;
-      font-size: clamp(2.2rem, 4.2vw, 4.8rem);
+      font-size: clamp(2rem, 4vw, 4.5rem);
       line-height: 0.98;
-      letter-spacing: -0.055em;
       font-weight: 700;
-    }
-
-    .presentation-copy .secondary {
-      margin-top: 3rem;
-      font-size: clamp(1.7rem, 2.8vw, 3rem);
-      font-weight: 500;
-      letter-spacing: -0.035em;
-      line-height: 1.05;
+      letter-spacing: -0.055em;
     }
 
     /* --------------------------------------------------
@@ -269,11 +210,17 @@
     }
 
     /* --------------------------------------------------
-       CONVOCATORIA
+       COLABORACIÓN / CONTACTO
     -------------------------------------------------- */
 
     .collaborate {
-      padding: 12vw 5vw 10vw;
+      background: var(--ocre);
+      color: var(--green);
+      padding: 11vw 5vw 12vw;
+    }
+
+    .collaborate-inner {
+      max-width: 1050px;
     }
 
     .collaborate h2 {
@@ -286,49 +233,87 @@
       letter-spacing: -0.055em;
     }
 
-    .collaborate-body {
-      margin-top: 8vw;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 8vw;
-      align-items: start;
+    .collaborate-copy {
+      margin-top: 7vw;
+      max-width: 850px;
     }
 
-    .collaborate-body p {
+    .collaborate-copy > p {
       margin: 0;
-    }
-
-    .collaborate-body .main-copy {
       font-family: "Open Sans", sans-serif;
-      font-size: clamp(1.4rem, 2.2vw, 2rem);
-      line-height: 1.15;
+      font-size: clamp(1.6rem, 2.8vw, 2.8rem);
+      line-height: 1.05;
       font-weight: 600;
-      letter-spacing: -0.025em;
+      letter-spacing: -0.035em;
     }
 
-    .collaborate-body .secondary-copy {
+    .collaborate-contact {
+      margin-top: 7vw;
+    }
+
+    .collaborate-contact h3 {
+      margin: 0 0 3vw;
       font-family: "Spectral", serif;
-      font-size: clamp(2.7rem, 5vw, 5rem);
-      line-height: 0.88;
+      font-size: clamp(2.8rem, 5vw, 5rem);
       font-weight: 800;
+      line-height: 0.9;
       letter-spacing: -0.05em;
     }
 
-    .whatsapp {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.8rem;
-      margin-top: 3rem;
+    .contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
       text-decoration: none;
-      color: var(--green);
-      font-family: "Open Sans", sans-serif;
-      font-size: clamp(1.1rem, 1.5vw, 1.4rem);
+      width: fit-content;
+    }
+
+    .contact-item img {
+      width: 2rem;
+      height: 2rem;
+      object-fit: contain;
+      flex: 0 0 auto;
+    }
+
+    .contact-item .contact-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-label {
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .contact-value {
+      margin-top: 0.25rem;
+      font-size: clamp(1.1rem, 1.7vw, 1.45rem);
+      line-height: 1.25;
       font-weight: 700;
     }
 
-    .whatsapp img {
-      width: 2rem;
-      height: 2rem;
+    .contact-detail {
+      margin-top: 0.2rem;
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    .contact-link {
+      display: inline-block;
+      margin-top: 0.3rem;
+      font-size: 0.95rem;
+      font-weight: 800;
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 5px;
     }
 
     /* --------------------------------------------------
@@ -336,29 +321,17 @@
     -------------------------------------------------- */
 
     .signature {
-      padding: 7vw 5vw 8vw;
+      padding: 9vw 5vw 10vw;
       border-top: 1px solid rgba(36, 71, 58, 0.25);
     }
 
     .signature-title {
       margin: 0 0 5vw;
-      display: flex;
-      align-items: baseline;
-      gap: 0.25em;
-      line-height: 0.85;
-      letter-spacing: -0.05em;
-    }
-
-    .signature-title .somos {
       font-family: "Open Sans", sans-serif;
-      font-size: clamp(2.5rem, 5vw, 5rem);
-      font-weight: 500;
-    }
-
-    .signature-title .alba {
-      font-family: "Spectral", serif;
-      font-size: clamp(4rem, 8vw, 8rem);
-      font-weight: 600;
+      font-size: clamp(3rem, 7vw, 7rem);
+      font-weight: 800;
+      line-height: 0.9;
+      letter-spacing: -0.06em;
     }
 
     .signature-grid {
@@ -384,33 +357,42 @@
     }
 
     /* --------------------------------------------------
+       CIERRE / LOGO
+    -------------------------------------------------- */
+
+    .closing {
+      min-height: 48vh;
+      padding: 8vw 5vw;
+      background: var(--green);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .closing-logo {
+      width: min(70vw, 850px);
+      height: auto;
+    }
+
+    /* --------------------------------------------------
        FOOTER
     -------------------------------------------------- */
 
     footer {
-      background: var(--ink);
-      color: var(--paper);
-      padding: 4vw 5vw;
+      background: var(--paper);
+      color: var(--green);
+      padding: 2rem 5vw;
       display: flex;
       justify-content: space-between;
-      gap: 3rem;
-      align-items: flex-end;
+      gap: 2rem;
+      align-items: center;
     }
 
     footer p {
       margin: 0;
-    }
-
-    .footer-brand {
-      font-size: 0.9rem;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-    }
-
-    .footer-copy {
-      font-size: 0.8rem;
-      opacity: 0.8;
-      text-align: right;
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
     }
 
     /* --------------------------------------------------
@@ -429,45 +411,21 @@
 
       .hero {
         min-height: auto;
-        padding: 7vh 6vw 12vh;
+        padding: 7vh 6vw 13vh;
       }
 
       .hero-title {
         font-size: clamp(4rem, 17vw, 7rem);
-        line-height: 0.72;
+        line-height: 0.68;
       }
 
       .hero-bottom {
-        margin-top: 8vh;
-        grid-template-columns: 1fr;
-        gap: 3rem;
+        margin-top: 9vh;
       }
 
-      .hero-bottom p,
-      .hero-note {
-        font-size: clamp(1.35rem, 6.5vw, 2rem) !important;
-        text-align: left;
-      }
-
-      .presentation {
-        min-height: auto;
-        padding: 14vw 6vw 16vw;
-        grid-template-columns: 1fr;
-        gap: 12vw;
-      }
-
-      .presentation-logo {
-        width: 82%;
-        margin: 0 auto;
-      }
-
-      .presentation-copy p {
-        font-size: clamp(2rem, 9vw, 4rem);
-      }
-
-      .presentation-copy .secondary {
-        margin-top: 2rem;
-        font-size: clamp(1.5rem, 7vw, 2.5rem);
+      .hero-bottom p {
+        font-size: clamp(1.8rem, 8vw, 3rem);
+        line-height: 1;
       }
 
       .place {
@@ -503,30 +461,41 @@
       }
 
       .collaborate {
-        padding: 16vw 6vw 14vw;
+        padding: 16vw 6vw 18vw;
       }
 
       .collaborate h2 {
         font-size: clamp(4rem, 16vw, 7rem);
       }
 
-      .collaborate-body {
+      .collaborate-copy {
         margin-top: 14vw;
-        grid-template-columns: 1fr;
-        gap: 5rem;
       }
 
-      .collaborate-body .secondary-copy {
-        font-size: clamp(2.8rem, 13vw, 5rem);
+      .collaborate-copy > p {
+        font-size: clamp(1.5rem, 7vw, 2.4rem);
+      }
+
+      .collaborate-contact {
+        margin-top: 14vw;
+      }
+
+      .collaborate-contact h3 {
+        margin-bottom: 10vw;
+        font-size: clamp(2.8rem, 12vw, 5rem);
+      }
+
+      .contact-list {
+        gap: 2.2rem;
       }
 
       .signature {
-        padding: 12vw 6vw;
+        padding: 14vw 6vw;
       }
 
       .signature-title {
         margin-bottom: 10vw;
-        flex-wrap: wrap;
+        font-size: clamp(3rem, 13vw, 6rem);
       }
 
       .signature-grid {
@@ -534,14 +503,19 @@
         gap: 3rem;
       }
 
-      footer {
-        padding: 8vw 6vw;
-        flex-direction: column;
-        align-items: flex-start;
+      .closing {
+        min-height: 38vh;
+        padding: 16vw 6vw;
       }
 
-      .footer-copy {
-        text-align: left;
+      .closing-logo {
+        width: 82vw;
+      }
+
+      footer {
+        padding: 1.5rem 6vw;
+        flex-direction: column;
+        align-items: flex-start;
       }
     }
   </style>
@@ -567,48 +541,13 @@
         <span class="line">Estamos</span>
         <span class="line">construyendo</span>
         <span class="line">un nuevo</span>
-        <span class="line italic">espacio</span>
+        <span class="line">espacio</span>
       </h1>
 
       <div class="hero-bottom">
-
         <p>
-          FUNDACIÓN ALBA acompaña a personas con consumos problemáticos
-          y a sus redes de contención.
+          FUNDACIÓN ALBA acompaña a personas con consumos problemáticos y a sus redes de contención. La sede nos permitirá ampliar las posibilidades de encuentro.
         </p>
-
-        <p class="hero-note">
-          La sede nos permitirá ampliar las posibilidades de encuentro.
-        </p>
-
-      </div>
-
-    </section>
-
-
-    <!-- PRESENTACIÓN -->
-
-    <section class="presentation">
-
-      <div class="presentation-mark">
-        <img
-          class="presentation-logo"
-          src="assets/brand/Alba.isologotipo.blanco.svg"
-          alt="FUNDACIÓN ALBA"
-        >
-      </div>
-
-      <div class="presentation-copy">
-
-        <p>
-          FUNDACIÓN ALBA acompaña a personas con consumos problemáticos
-          y a sus redes de contención.
-        </p>
-
-        <p class="secondary">
-          La sede nos permitirá ampliar las posibilidades de encuentro.
-        </p>
-
       </div>
 
     </section>
@@ -619,11 +558,9 @@
     <section class="place">
 
       <div class="place-heading">
-
         <h2>
           Un lugar para encontrarse y compartir
         </h2>
-
       </div>
 
 
@@ -671,37 +608,102 @@
     </section>
 
 
-    <!-- CONVOCATORIA -->
+    <!-- COLABORACIÓN / CONTACTO -->
 
     <section class="collaborate">
 
-      <h2>¿Cómo colaborar?</h2>
+      <div class="collaborate-inner">
 
-      <div class="collaborate-body">
+        <h2>¿Cómo colaborar?</h2>
 
-        <div>
+        <div class="collaborate-copy">
 
-          <p class="main-copy">
-            Recursos, equipamiento, servicios, conocimientos,
-            aportes económicos o contactos.
+          <p>
+            Recursos, equipamiento, servicios, conocimientos, aportes económicos o contactos.
           </p>
 
-          <a class="whatsapp" href="#">
-            <img
-              src="assets/contact/whatsapp.svg"
-              alt=""
-              aria-hidden="true"
-            >
-            <span>WhatsApp · 11 0000-0000</span>
-          </a>
+          <div class="collaborate-contact">
 
-        </div>
+            <h3>
+              Nos gustaría conversar con vos.
+            </h3>
 
-        <div>
+            <div class="contact-list">
 
-          <p class="secondary-copy">
-            Nos gustaría conversar con vos.
-          </p>
+              <!-- WhatsApp -->
+
+              <a
+                class="contact-item"
+                href="https://wa.me/549115678910"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="assets/contact/whatsapp.svg"
+                  alt=""
+                  aria-hidden="true"
+                >
+
+                <span class="contact-text">
+                  <span class="contact-label">WhatsApp</span>
+                  <span class="contact-value">+54 9 11 567 8910</span>
+                  <span class="contact-detail">
+                    Lunes a viernes · 9 a 18 h
+                  </span>
+                </span>
+              </a>
+
+
+              <!-- Email -->
+
+              <a
+                class="contact-item"
+                href="mailto:hola@fundacionalba.org"
+              >
+                <img
+                  src="assets/contact/mail.svg"
+                  alt=""
+                  aria-hidden="true"
+                >
+
+                <span class="contact-text">
+                  <span class="contact-label">Email</span>
+                  <span class="contact-value">hola@fundacionalba.org</span>
+                </span>
+              </a>
+
+
+              <!-- Sede -->
+
+              <div class="contact-item">
+
+                <img
+                  src="assets/contact/place.svg"
+                  alt=""
+                  aria-hidden="true"
+                >
+
+                <span class="contact-text">
+                  <span class="contact-label">Sede</span>
+                  <span class="contact-value">
+                    Rosario 465, 4.º 18, CABA
+                  </span>
+
+                  <a
+                    class="contact-link"
+                    href="https://www.google.com/maps/search/?api=1&query=Rosario+465%2C+4%C2%BA+18%2C+CABA"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Cómo llegar →
+                  </a>
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
 
         </div>
 
@@ -715,8 +717,7 @@
     <section class="signature">
 
       <h2 class="signature-title">
-        <span class="somos">somos</span>
-        <span class="alba">ALBA</span>
+        SOMOS ALBA
       </h2>
 
       <div class="signature-grid">
@@ -760,19 +761,32 @@
 
     </section>
 
+
+    <!-- CIERRE -->
+
+    <section class="closing">
+
+      <img
+        class="closing-logo"
+        src="assets/brand/Alba.isologotipo.blanco.svg"
+        alt="FUNDACIÓN ALBA"
+      >
+
+    </section>
+
   </main>
 
 
+  <!-- FOOTER -->
+
   <footer>
 
-    <p class="footer-brand">FUNDACIÓN ALBA</p>
+    <p>© FUNDACIÓN ALBA</p>
 
-    <p class="footer-copy">
-      © FUNDACIÓN ALBA<br>
-      Convocatoria a colaborar
-    </p>
+    <p>Convocatoria a colaborar</p>
 
   </footer>
 
 </body>
 </html>
+```
