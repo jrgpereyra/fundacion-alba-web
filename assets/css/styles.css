@@ -21,7 +21,7 @@ html {
 
 body {
   background: #FFFDF5;
-  color: #17261B;
+  color: #24473A;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -67,7 +67,7 @@ a {
 
 /* Subrayado hover visible sobre el panel Accent (links de contacto) */
 .contact-item::after {
-  background-color: #17261B;
+  background-color: #24473A;
 }
 
 .approach-photo {
