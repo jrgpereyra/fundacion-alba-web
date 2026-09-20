@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -99,32 +98,39 @@
       font-family: "Spectral", serif;
       font-size: clamp(4.5rem, 10.8vw, 11rem);
       font-weight: 800;
-      line-height: 0.64;
+      line-height: 0.76;
       letter-spacing: -0.06em;
     }
 
     .hero-title .line {
       display: block;
-      font-style: normal;
-      font-weight: 800;
+    }
+
+    .hero-title .italic {
+      font-style: italic;
+      font-weight: 700;
     }
 
     .hero-bottom {
-      margin-top: 10vh;
-      max-width: 1450px;
+      margin-top: 9vh;
+      max-width: 1100px;
     }
 
     .hero-bottom p {
       margin: 0;
-      font-family: "Open Sans", sans-serif;
-      font-size: clamp(2rem, 4vw, 4.5rem);
-      line-height: 0.98;
-      font-weight: 700;
-      letter-spacing: -0.055em;
+      max-width: 1050px;
+      font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+      line-height: 1.08;
+      font-weight: 600;
+      letter-spacing: -0.035em;
+    }
+
+    .hero-bottom p + p {
+      margin-top: 1.5rem;
     }
 
     /* --------------------------------------------------
-       EL LUGAR
+       LUGAR
     -------------------------------------------------- */
 
     .place {
@@ -149,26 +155,13 @@
       border-top: 2px solid var(--ink);
     }
 
-    .place-item {
+    .place-list p {
+      margin: 0;
       padding: 2.2rem 0;
       border-bottom: 1px solid rgba(36, 71, 58, 0.45);
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 5vw;
-      align-items: baseline;
-    }
-
-    .place-item span:first-child {
-      font-family: "Open Sans", sans-serif;
-      font-size: clamp(1.3rem, 2.2vw, 2.1rem);
-      font-weight: 700;
-      letter-spacing: -0.025em;
-    }
-
-    .place-item span:last-child {
       font-family: "Spectral", serif;
-      font-size: clamp(1.25rem, 1.8vw, 1.7rem);
-      line-height: 1.2;
+      font-size: clamp(1.35rem, 2.2vw, 2.1rem);
+      line-height: 1.25;
     }
 
     /* --------------------------------------------------
@@ -210,17 +203,12 @@
     }
 
     /* --------------------------------------------------
-       COLABORACIÓN / CONTACTO
+       CONVOCATORIA
     -------------------------------------------------- */
 
     .collaborate {
       background: var(--ocre);
-      color: var(--green);
-      padding: 11vw 5vw 12vw;
-    }
-
-    .collaborate-inner {
-      max-width: 1050px;
+      padding: 12vw 5vw 10vw;
     }
 
     .collaborate h2 {
@@ -233,87 +221,53 @@
       letter-spacing: -0.055em;
     }
 
-    .collaborate-copy {
-      margin-top: 7vw;
-      max-width: 850px;
+    .collaborate-body {
+      margin-top: 8vw;
+      max-width: 1000px;
     }
 
-    .collaborate-copy > p {
+    .collaborate-body p {
       margin: 0;
+    }
+
+    .collaborate-body .main-copy {
       font-family: "Open Sans", sans-serif;
-      font-size: clamp(1.6rem, 2.8vw, 2.8rem);
-      line-height: 1.05;
+      font-size: clamp(1.5rem, 2.4vw, 2.3rem);
+      line-height: 1.15;
       font-weight: 600;
-      letter-spacing: -0.035em;
+      letter-spacing: -0.025em;
     }
 
-    .collaborate-contact {
-      margin-top: 7vw;
-    }
-
-    .collaborate-contact h3 {
-      margin: 0 0 3vw;
+    .collaborate-body .secondary-copy {
+      margin-top: 5vw;
       font-family: "Spectral", serif;
-      font-size: clamp(2.8rem, 5vw, 5rem);
+      font-size: clamp(2.7rem, 5vw, 5rem);
+      line-height: 0.92;
       font-weight: 800;
-      line-height: 0.9;
       letter-spacing: -0.05em;
     }
 
-    .contact-list {
+    .contact-links {
+      margin-top: 5vw;
       display: flex;
       flex-direction: column;
-      gap: 2rem;
-    }
-
-    .contact-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-      text-decoration: none;
-      width: fit-content;
-    }
-
-    .contact-item img {
-      width: 2rem;
-      height: 2rem;
-      object-fit: contain;
-      flex: 0 0 auto;
-    }
-
-    .contact-item .contact-text {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .contact-label {
-      font-size: 0.72rem;
-      font-weight: 800;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-    }
-
-    .contact-value {
-      margin-top: 0.25rem;
-      font-size: clamp(1.1rem, 1.7vw, 1.45rem);
-      line-height: 1.25;
-      font-weight: 700;
-    }
-
-    .contact-detail {
-      margin-top: 0.2rem;
-      font-size: 0.9rem;
-      line-height: 1.4;
+      gap: 1.2rem;
     }
 
     .contact-link {
-      display: inline-block;
-      margin-top: 0.3rem;
-      font-size: 0.95rem;
-      font-weight: 800;
-      text-decoration: underline;
-      text-decoration-thickness: 2px;
-      text-underline-offset: 5px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      width: fit-content;
+      text-decoration: none;
+      font-family: "Open Sans", sans-serif;
+      font-size: clamp(1.1rem, 1.5vw, 1.4rem);
+      font-weight: 700;
+    }
+
+    .contact-link img {
+      width: 2rem;
+      height: 2rem;
     }
 
     /* --------------------------------------------------
@@ -321,17 +275,17 @@
     -------------------------------------------------- */
 
     .signature {
-      padding: 9vw 5vw 10vw;
+      padding: 7vw 5vw 8vw;
       border-top: 1px solid rgba(36, 71, 58, 0.25);
     }
 
     .signature-title {
       margin: 0 0 5vw;
       font-family: "Open Sans", sans-serif;
-      font-size: clamp(3rem, 7vw, 7rem);
+      font-size: clamp(3rem, 6vw, 6rem);
       font-weight: 800;
       line-height: 0.9;
-      letter-spacing: -0.06em;
+      letter-spacing: -0.055em;
     }
 
     .signature-grid {
@@ -357,41 +311,29 @@
     }
 
     /* --------------------------------------------------
-       CIERRE / LOGO
+       CIERRE
     -------------------------------------------------- */
 
     .closing {
-      min-height: 48vh;
-      padding: 8vw 5vw;
       background: var(--green);
+      color: var(--paper);
+      min-height: 55vh;
+      padding: 8vw 5vw 5vw;
       display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
     }
 
     .closing-logo {
-      width: min(70vw, 850px);
-      height: auto;
+      width: min(420px, 55vw);
+      margin-bottom: 3rem;
     }
 
-    /* --------------------------------------------------
-       FOOTER
-    -------------------------------------------------- */
-
-    footer {
-      background: var(--paper);
-      color: var(--green);
-      padding: 2rem 5vw;
-      display: flex;
-      justify-content: space-between;
-      gap: 2rem;
-      align-items: center;
-    }
-
-    footer p {
+    .closing-date {
       margin: 0;
-      font-size: 0.72rem;
+      font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+      font-weight: 600;
       letter-spacing: 0.04em;
     }
 
@@ -411,21 +353,24 @@
 
       .hero {
         min-height: auto;
-        padding: 7vh 6vw 13vh;
+        padding: 7vh 6vw 12vh;
       }
 
       .hero-title {
         font-size: clamp(4rem, 17vw, 7rem);
-        line-height: 0.68;
+        line-height: 0.78;
       }
 
       .hero-bottom {
-        margin-top: 9vh;
+        margin-top: 8vh;
       }
 
       .hero-bottom p {
-        font-size: clamp(1.8rem, 8vw, 3rem);
-        line-height: 1;
+        font-size: clamp(1.35rem, 6.5vw, 2rem);
+      }
+
+      .hero-bottom p + p {
+        margin-top: 1.3rem;
       }
 
       .place {
@@ -440,10 +385,9 @@
         margin-top: 14vw;
       }
 
-      .place-item {
-        grid-template-columns: 1fr;
-        gap: 0.8rem;
+      .place-list p {
         padding: 1.7rem 0;
+        font-size: clamp(1.3rem, 6vw, 2rem);
       }
 
       .need {
@@ -461,41 +405,31 @@
       }
 
       .collaborate {
-        padding: 16vw 6vw 18vw;
+        padding: 16vw 6vw 14vw;
       }
 
       .collaborate h2 {
         font-size: clamp(4rem, 16vw, 7rem);
       }
 
-      .collaborate-copy {
+      .collaborate-body {
         margin-top: 14vw;
       }
 
-      .collaborate-copy > p {
-        font-size: clamp(1.5rem, 7vw, 2.4rem);
+      .collaborate-body .secondary-copy {
+        font-size: clamp(2.8rem, 13vw, 5rem);
       }
 
-      .collaborate-contact {
-        margin-top: 14vw;
-      }
-
-      .collaborate-contact h3 {
-        margin-bottom: 10vw;
-        font-size: clamp(2.8rem, 12vw, 5rem);
-      }
-
-      .contact-list {
-        gap: 2.2rem;
+      .contact-links {
+        margin-top: 10vw;
       }
 
       .signature {
-        padding: 14vw 6vw;
+        padding: 12vw 6vw;
       }
 
       .signature-title {
         margin-bottom: 10vw;
-        font-size: clamp(3rem, 13vw, 6rem);
       }
 
       .signature-grid {
@@ -504,18 +438,13 @@
       }
 
       .closing {
-        min-height: 38vh;
-        padding: 16vw 6vw;
+        min-height: 45vh;
+        padding: 12vw 6vw 8vw;
       }
 
       .closing-logo {
-        width: 82vw;
-      }
-
-      footer {
-        padding: 1.5rem 6vw;
-        flex-direction: column;
-        align-items: flex-start;
+        width: min(340px, 72vw);
+        margin-bottom: 2rem;
       }
     }
   </style>
@@ -527,7 +456,6 @@
     <div class="header-brand">FUNDACIÓN ALBA</div>
     <div class="header-label">Convocatoria a colaborar</div>
   </header>
-
 
   <main>
 
@@ -541,13 +469,20 @@
         <span class="line">Estamos</span>
         <span class="line">construyendo</span>
         <span class="line">un nuevo</span>
-        <span class="line">espacio</span>
+        <span class="line italic">espacio</span>
       </h1>
 
       <div class="hero-bottom">
+
         <p>
-          FUNDACIÓN ALBA acompaña a personas con consumos problemáticos y a sus redes de contención. La sede nos permitirá ampliar las posibilidades de encuentro.
+          FUNDACIÓN ALBA acompaña a personas con consumos problemáticos
+          y a sus redes de contención.
         </p>
+
+        <p>
+          La sede nos permitirá ampliar las posibilidades de encuentro.
+        </p>
+
       </div>
 
     </section>
@@ -558,33 +493,17 @@
     <section class="place">
 
       <div class="place-heading">
-        <h2>
-          Un lugar para encontrarse y compartir
-        </h2>
+        <h2>Un lugar para encontrarse y compartir</h2>
       </div>
-
 
       <div class="place-list">
 
-        <div class="place-item">
-          <span>Consultorios</span>
-          <span>para terapias individuales,</span>
-        </div>
-
-        <div class="place-item">
-          <span>Trabajo grupal</span>
-          <span>ámbitos para el trabajo grupal,</span>
-        </div>
-
-        <div class="place-item">
-          <span>Actividades abiertas</span>
-          <span>actividades abiertas tanto a profesionales como a la comunidad,</span>
-        </div>
-
-        <div class="place-item">
-          <span>Familias y redes</span>
-          <span>y encuentros con las familias y las redes de contención.</span>
-        </div>
+        <p>
+          Consultorios para terapias individuales,<br>
+          ámbitos para el trabajo grupal,<br>
+          actividades abiertas tanto a profesionales como a la comunidad,<br>
+          y encuentros con las familias y las redes de contención.
+        </p>
 
       </div>
 
@@ -608,102 +527,60 @@
     </section>
 
 
-    <!-- COLABORACIÓN / CONTACTO -->
+    <!-- CONVOCATORIA -->
 
     <section class="collaborate">
 
-      <div class="collaborate-inner">
+      <h2>¿Cómo colaborar?</h2>
 
-        <h2>¿Cómo colaborar?</h2>
+      <div class="collaborate-body">
 
-        <div class="collaborate-copy">
+        <p class="main-copy">
+          Recursos, equipamiento, servicios, conocimientos,
+          aportes económicos o contactos.
+        </p>
 
-          <p>
-            Recursos, equipamiento, servicios, conocimientos, aportes económicos o contactos.
-          </p>
+        <p class="secondary-copy">
+          Nos gustaría conversar con vos.
+        </p>
 
-          <div class="collaborate-contact">
+        <div class="contact-links">
 
-            <h3>
-              Nos gustaría conversar con vos.
-            </h3>
+          <a class="contact-link" href="#">
+            <img
+              src="assets/contact/whatsapp.svg"
+              alt=""
+              aria-hidden="true"
+            >
+            <span>WhatsApp</span>
+          </a>
 
-            <div class="contact-list">
+          <a class="contact-link" href="#">
+            <img
+              src="assets/contact/mail.svg"
+              alt=""
+              aria-hidden="true"
+            >
+            <span>email</span>
+          </a>
 
-              <!-- WhatsApp -->
-
-              <a
-                class="contact-item"
-                href="https://wa.me/549115678910"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="assets/contact/whatsapp.svg"
-                  alt=""
-                  aria-hidden="true"
-                >
-
-                <span class="contact-text">
-                  <span class="contact-label">WhatsApp</span>
-                  <span class="contact-value">+54 9 11 567 8910</span>
-                  <span class="contact-detail">
-                    Lunes a viernes · 9 a 18 h
-                  </span>
-                </span>
-              </a>
-
-
-              <!-- Email -->
-
-              <a
-                class="contact-item"
-                href="mailto:hola@fundacionalba.org"
-              >
-                <img
-                  src="assets/contact/mail.svg"
-                  alt=""
-                  aria-hidden="true"
-                >
-
-                <span class="contact-text">
-                  <span class="contact-label">Email</span>
-                  <span class="contact-value">hola@fundacionalba.org</span>
-                </span>
-              </a>
-
-
-              <!-- Sede -->
-
-              <div class="contact-item">
-
-                <img
-                  src="assets/contact/place.svg"
-                  alt=""
-                  aria-hidden="true"
-                >
-
-                <span class="contact-text">
-                  <span class="contact-label">Sede</span>
-                  <span class="contact-value">
-                    Rosario 465, 4.º 18, CABA
-                  </span>
-
-                  <a
-                    class="contact-link"
-                    href="https://www.google.com/maps/search/?api=1&query=Rosario+465%2C+4%C2%BA+18%2C+CABA"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Cómo llegar →
-                  </a>
-                </span>
-
-              </div>
-
-            </div>
-
+          <div class="contact-link">
+            <img
+              src="assets/contact/place.svg"
+              alt=""
+              aria-hidden="true"
+            >
+            <span>Sede<br>Rosario 465, 4.º 18, CABA</span>
           </div>
+
+          <a
+            class="contact-link"
+            href="https://www.google.com/maps/search/?api=1&query=Rosario+465%2C+4%C2%BA+18%2C+CABA"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>Cómo llegar →</span>
+          </a>
 
         </div>
 
@@ -716,9 +593,7 @@
 
     <section class="signature">
 
-      <h2 class="signature-title">
-        SOMOS ALBA
-      </h2>
+      <h2 class="signature-title">SOMOS ALBA</h2>
 
       <div class="signature-grid">
 
@@ -772,21 +647,35 @@
         alt="FUNDACIÓN ALBA"
       >
 
+      <p class="closing-date">
+        Buenos Aires · <span id="current-date"></span>
+      </p>
+
     </section>
 
   </main>
 
+  <script>
+    const months = [
+      "Enero",
+      "Febrero",
+      "Marzo",
+      "Abril",
+      "Mayo",
+      "Junio",
+      "Julio",
+      "Agosto",
+      "Septiembre",
+      "Octubre",
+      "Noviembre",
+      "Diciembre"
+    ];
 
-  <!-- FOOTER -->
+    const now = new Date();
 
-  <footer>
-
-    <p>© FUNDACIÓN ALBA</p>
-
-    <p>Convocatoria a colaborar</p>
-
-  </footer>
+    document.getElementById("current-date").textContent =
+      `${months[now.getMonth()]} de ${now.getFullYear()}`;
+  </script>
 
 </body>
 </html>
-```
