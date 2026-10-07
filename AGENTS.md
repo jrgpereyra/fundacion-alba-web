@@ -24,7 +24,7 @@ Static single-page site. `index.html` + `assets/`. No framework, no bundler, no 
 ## Git (`gk` = git-sidekick, `/usr/local/bin/gk`)
 
 - Branches: `dev` (work) → `main` (published) via `gk merge dev main 2` (strict: guard snapshot + push). Remote `origin` = GitHub repo, currently **public temporal** para preview del cliente en Pages (revertir a privado al terminar).
-- GitHub Pages activo temporal: `https://jrgpereyra.github.io/fundacion-alba-web/` desde branch `dev` (`/`). No pushear a `dev` hasta que el cliente apruebe, porque cada push a `dev` republica el preview.
+- GitHub Pages activo temporal: `https://jrgpereyra.github.io/fundacion-alba-web/` desde branch `main` (`/`). Flujo: trabajar en `dev`, chequear en local, mergear a `main` solo al aprobar — cada push/merge a `main` republica el preview. Push a `dev` no publica.
 - `gk close` commits + creates a `work/…` snapshot tag + appends `.git-worklog.md`, leaving it `M` (dirty) for the next session — that is normal, not a problem to fix.
 - `gk` has no command to add a remote to an existing repo; use `gh`/git directly for that.
 - `antecedentes/` is history material, ignored via `.gitignore` — never `git add` it.
