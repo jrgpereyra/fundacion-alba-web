@@ -23,7 +23,8 @@ Static single-page site. `index.html` + `assets/`. No framework, no bundler, no 
 
 ## Git (`gk` = git-sidekick, `/usr/local/bin/gk`)
 
-- Branches: `dev` (work) → `main` (published) via `gk merge dev main 2` (strict: guard snapshot + push). Remote `origin` = private GitHub repo.
+- Branches: `dev` (work) → `main` (published) via `gk merge dev main 2` (strict: guard snapshot + push). Remote `origin` = GitHub repo, currently **public temporal** para preview del cliente en Pages (revertir a privado al terminar).
+- GitHub Pages activo temporal: `https://jrgpereyra.github.io/fundacion-alba-web/` desde branch `dev` (`/`). No pushear a `dev` hasta que el cliente apruebe, porque cada push a `dev` republica el preview.
 - `gk close` commits + creates a `work/…` snapshot tag + appends `.git-worklog.md`, leaving it `M` (dirty) for the next session — that is normal, not a problem to fix.
 - `gk` has no command to add a remote to an existing repo; use `gh`/git directly for that.
 - `antecedentes/` is history material, ignored via `.gitignore` — never `git add` it.
@@ -32,5 +33,5 @@ Static single-page site. `index.html` + `assets/`. No framework, no bundler, no 
 ## Gotchas
 
 - `main` only moves via strict merge from `dev`; never commit on `main` directly.
-- GitHub Pages does NOT work on this repo (private + Free plan → API `422`). Making it public needs a security review first; author email `jorgehpereyra@gmail.com` is in all commit metadata.
+- GitHub Pages activo temporal: repo **público solo para preview del cliente** (se hizo público porque Pages no anda en privado con plan Free). Revertir a privado al terminar; author email `jorgehpereyra@gmail.com` is in all commit metadata.
 - Contact data in `index.html` (WhatsApp, email, address) is institutional and intentionally public.
