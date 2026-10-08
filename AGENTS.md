@@ -17,7 +17,7 @@ Static single-page site. `index.html` + `assets/`. No framework, no bundler, no 
 
 ## Dependencies (all self-hosted by design)
 
-- Fonts: `assets/fonts/` (latin subset only: Open Sans variable 400–700, Spectral 600) via `@font-face` in `styles.css`. No Google Fonts links.
+- Fonts: `assets/fonts/` (latin subset only: Open Sans variable 400–700, Spectral 600/700/800) via `@font-face` in `styles.css`. No Google Fonts links.
 - Icons: local SVG in `assets/contact/`, `assets/brand/`, `assets/social/`. No icon fonts.
 - Only acceptable external URLs are functional links: `wa.me` and Google Maps. Never re-add render-blocking externals (CDNs, font links, `<style>` blocks in HTML).
 

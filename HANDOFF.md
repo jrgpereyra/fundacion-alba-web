@@ -13,8 +13,8 @@ Archivo de trabajo temporal: al terminar decidimos si se conserva o se borra.
 
 ## 2. Cierre de la landing (`index.html`)
 
-- [ ] Favicon (no existe; candidato: avatar de Alba en `assets/brand/`)
-- [ ] Meta description + Open Graph / Twitter Card (el `<head>` hoy solo tiene título)
+- [x] Favicon: SVG + ICO + apple-touch-icon generados y linkeados en `index.html` y `convocatoria.html`
+- [x] Meta description + Open Graph / Twitter Card en ambas páginas (URLs absolutas al preview; cambiar al dominio final en el deploy)
 - [x] Optimizar `assets/images/hero.jpeg` y `enfoque.jpeg` (2,3/2,2 MB → 173/156 KB desktop + variantes mobile 39/37 KB)
 - [ ] QA final: links (WhatsApp, Maps, mailto, anclas), responsive, textos
 
@@ -30,4 +30,5 @@ Archivo de trabajo temporal: al terminar decidimos si se conserva o se borra.
 - [ ] Subir solo `index.html` + `assets/` (sin `convocatoria*.html`, `paleta-exploracion.*`,
       `tmp/`, `antecedentes/`, `node_modules/`, `.git`, `package*.json`)
 - [ ] Verificar sitio en dominio final
+- [ ] Actualizar `og:url` / `og:image` / `twitter:image` al dominio final (hoy apuntan al preview de Pages)
 - [ ] Volver el repo a privado y apagar Pages (preview temporal)
