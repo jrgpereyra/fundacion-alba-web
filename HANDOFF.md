@@ -15,7 +15,7 @@ Archivo de trabajo temporal: al terminar decidimos si se conserva o se borra.
 
 - [ ] Favicon (no existe; candidato: avatar de Alba en `assets/brand/`)
 - [ ] Meta description + Open Graph / Twitter Card (el `<head>` hoy solo tiene título)
-- [ ] Optimizar `assets/images/hero.jpeg` y `enfoque.jpeg` (~2,2 MB c/u → objetivo <300 KB c/u)
+- [x] Optimizar `assets/images/hero.jpeg` y `enfoque.jpeg` (2,3/2,2 MB → 173/156 KB desktop + variantes mobile 39/37 KB)
 - [ ] QA final: links (WhatsApp, Maps, mailto, anclas), responsive, textos
 
 ## 3. Decisión pendiente
