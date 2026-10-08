@@ -9,6 +9,7 @@ Archivo de trabajo temporal: al terminar decidimos si se conserva o se borra.
 - [ ] URL real de Facebook (ídem)
 - [ ] URL real de YouTube (ídem)
 - [ ] URL real de TikTok (ídem)
+- [ ] Listado de SOMOS ALBA: roles de Gloria, Sergio y Rodo (hoy "[Función pendiente]") — pedírselo a Pablo
 
 ## 2. Cierre de la landing (`index.html`)
 
