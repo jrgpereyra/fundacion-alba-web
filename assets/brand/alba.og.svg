@@ -9,6 +9,9 @@
    id="svg1"
    inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
    sodipodi:docname="alba.og.svg"
+   inkscape:export-filename="../images/alba.og.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -23,9 +26,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
-     inkscape:zoom="1.0494145"
-     inkscape:cx="635.11604"
-     inkscape:cy="303.50256"
+     inkscape:zoom="0.25721475"
+     inkscape:cx="-134.12917"
+     inkscape:cy="-66.092633"
      inkscape:window-width="1920"
      inkscape:window-height="1043"
      inkscape:window-x="0"
@@ -40,16 +43,16 @@
      id="layer1"
      transform="translate(0,-71.898186)">
     <rect
-       style="fill:#fffffc;stroke-width:0.369829;stroke-dasharray:0.369829, 0.369829;paint-order:fill markers stroke;fill-opacity:1"
+       style="fill:#24473a;fill-opacity:1;stroke-width:0.369829;stroke-dasharray:0.369829, 0.369829;paint-order:fill markers stroke"
        id="rect1"
        width="317.5"
        height="166.6875"
-       x="0"
+       x="-2.4999999e-06"
        y="71.898186"
        rx="0" />
     <g
        id="g4"
-       transform="translate(-478.03399,-218.80395)"
+       transform="translate(53.749995,6.7419315)"
        style="fill:#ffffff">
       <g
          id="g3"
@@ -261,7 +264,7 @@
     </g>
     <g
        id="layer2-6"
-       transform="translate(14.772819,69.919376)">
+       transform="matrix(1.4014758,0,0,1.4014758,-68.267405,-252.70966)">
       <g
          id="g26"
          transform="matrix(1.2234889,0,0,1.2234889,-33.649087,1.8774414)">
