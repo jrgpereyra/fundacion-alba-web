@@ -10,4 +10,9 @@
   --font-spectral: "Spectral", serif;
   
   --spacing-seccion-movil: 2rem;
+  
+  --icono-contacto-tamano: 2.5rem;
+  --sede-texto-tamano: 0.75rem;
+  --sede-texto-tracking: 0.14em;
+  --sede-texto-peso: 600;
 }
