@@ -41,6 +41,37 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+.container-alba {
+  width: 100%;
+  max-width: var(--container-alba);
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .container-alba {
+    padding-inline: 2.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .container-alba {
+    padding-inline: 3.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-alba {
+    padding-inline: 5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container-alba {
+    padding-inline: 6rem;
+  }
+}
+
 /* El header debe tener siempre prioridad visual sobre el contenido */
 section {
   scroll-margin-top: 76px;

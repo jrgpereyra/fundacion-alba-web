@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
-@theme {
+@theme static {
+  --container-alba: 1500px;
+
   --color-alba-primary: #24473A;
   --color-alba-accent: #E3A03A;
   
